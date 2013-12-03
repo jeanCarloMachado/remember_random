@@ -1,0 +1,778 @@
+top - 13:55:13 up 18:03,  3 users,  load average: 0,54, 0,95, 1,08
+Tasks: 251 total,   1 running, 250 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 10,3 us,  2,9 sy,  0,1 ni, 84,7 id,  1,9 wa,  0,1 hi,  0,0 si,  0,0 st
+KiB Mem:   3711956 total,  3460348 used,   251608 free,    66072 buffers
+KiB Swap:  3905532 total,    89260 used,  3816272 free,  1625868 cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S  %CPU %MEM    TIME+  COMMAND
+ 6703 jean      20   0 1539m  43m  14m S   6,2  1,2   1:04.60 transmission-gt
+ 8049 jean      20   0 2100m 105m  29m S   6,2  2,9   1:09.47 rhythmbox
+12618 root      20   0  491m  82m  50m S   6,2  2,3   8:09.83 Xorg
+13402 jean      20   0 24860 1420 1056 R   6,2  0,0   0:00.01 top
+13995 jean      20   0 1292m  70m  18m S   6,2  1,9   7:00.84 compiz
+14037 jean      20   0 1659m  71m  30m S   6,2  2,0   2:51.82 nautilus
+24591 jean      20   0 1301m 345m  33m S   6,2  9,5  13:19.00 firefox
+    1 root      20   0 27172 2544 1272 S   0,0  0,1   0:01.68 init
+    2 root      20   0     0    0    0 S   0,0  0,0   0:00.00 kthreadd
+    3 root      20   0     0    0    0 S   0,0  0,0   0:00.28 ksoftirqd/0
+    5 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kworker/0:0H
+    7 root      rt   0     0    0    0 S   0,0  0,0   0:00.04 migration/0
+    8 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcu_bh
+    9 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuob/0
+   10 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuob/1
+   11 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuob/2
+   12 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuob/3
+   13 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuob/4
+   14 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuob/5
+   15 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuob/6
+   16 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuob/7
+   17 root      20   0     0    0    0 S   0,0  0,0   0:13.10 rcu_sched
+   18 root      20   0     0    0    0 S   0,0  0,0   0:04.57 rcuos/0
+   19 root      20   0     0    0    0 S   0,0  0,0   0:03.50 rcuos/1
+   20 root      20   0     0    0    0 S   0,0  0,0   0:04.65 rcuos/2
+   21 root      20   0     0    0    0 S   0,0  0,0   0:03.63 rcuos/3
+   22 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuos/4
+   23 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuos/5
+   24 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuos/6
+   25 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuos/7
+   26 root      rt   0     0    0    0 S   0,0  0,0   0:00.15 migration/1
+   27 root      20   0     0    0    0 S   0,0  0,0   0:00.21 ksoftirqd/1
+   29 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kworker/1:0H
+   30 root      rt   0     0    0    0 S   0,0  0,0   0:00.04 migration/2
+   31 root      20   0     0    0    0 S   0,0  0,0   0:00.31 ksoftirqd/2
+   33 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kworker/2:0H
+   34 root      rt   0     0    0    0 S   0,0  0,0   0:00.15 migration/3
+   35 root      20   0     0    0    0 S   0,0  0,0   0:00.20 ksoftirqd/3
+   37 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kworker/3:0H
+   38 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 khelper
+   39 root      20   0     0    0    0 S   0,0  0,0   0:00.00 kdevtmpfs
+   40 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 netns
+   41 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 writeback
+   42 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kintegrityd
+   43 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 bioset
+   45 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kblockd
+   46 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 ata_sff
+   47 root      20   0     0    0    0 S   0,0  0,0   0:00.05 khubd
+   48 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 md
+   49 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 devfreq_wq
+   52 root      20   0     0    0    0 S   0,0  0,0   0:00.00 khungtaskd
+   53 root      20   0     0    0    0 S   0,0  0,0   0:09.94 kswapd0
+   54 root      25   5     0    0    0 S   0,0  0,0   0:00.00 ksmd
+   55 root      39  19     0    0    0 S   0,0  0,0   0:00.00 khugepaged
+   56 root      20   0     0    0    0 S   0,0  0,0   0:00.00 fsnotify_mark
+   57 root      20   0     0    0    0 S   0,0  0,0   0:00.00 ecryptfs-kthrea
+   58 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 crypto
+   69 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kthrotld
+   74 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 binder
+   94 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 deferwq
+   95 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 charger_manager
+   97 root      20   0     0    0    0 S   0,0  0,0   0:00.42 kworker/3:1
+  284 root      20   0     0    0    0 S   0,0  0,0   0:00.00 scsi_eh_0
+  285 root      20   0     0    0    0 S   0,0  0,0   0:00.00 scsi_eh_1
+  286 root      20   0     0    0    0 S   0,0  0,0   0:00.00 scsi_eh_2
+  287 root      20   0     0    0    0 S   0,0  0,0   0:00.00 scsi_eh_3
+  288 root      20   0     0    0    0 S   0,0  0,0   0:00.00 scsi_eh_4
+  321 root      20   0     0    0    0 S   0,0  0,0   0:00.73 jbd2/sda2-8
+  322 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 ext4-rsv-conver
+  323 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 ext4-unrsv-conv
+  365 root      20   0 15272  528  420 S   0,0  0,0   0:00.11 upstart-file-br
+  421 root      20   0 17452  732  616 S   0,0  0,0   0:00.32 upstart-udev-br
+  423 root      20   0 21752 1096  788 S   0,0  0,0   0:00.25 udevd
+  827 root      20   0     0    0    0 S   0,0  0,0   0:00.06 ips-adjust
+  828 root      20   0     0    0    0 S   0,0  0,0   0:00.94 ips-monitor
+  892 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kpsmoused
+  916 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 cfg80211
+  969 root      20   0 23960 4132  704 S   0,0  0,1   1:33.98 mount.ntfs-3g
+  992 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 hd-audio0
+ 1009 root      20   0 52256 1864 1860 S   0,0  0,1   0:00.00 sshd
+ 1049 root      20   0 15260  520  408 S   0,0  0,0   0:00.06 upstart-socket-
+ 1064 syslog    20   0  241m 1108 1032 S   0,0  0,0   0:01.03 rsyslogd
+ 1082 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 ttm_swap
+ 1098 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 hd-audio1
+ 1146 messageb  20   0 25532 2404  920 S   0,0  0,1   0:10.90 dbus-daemon
+ 1177 root      20   0 83412 2496 2136 S   0,0  0,1   0:00.26 modem-manager
+ 1180 root      20   0 19244 1312 1184 S   0,0  0,0   0:00.00 bluetoothd
+ 1184 avahi     20   0 32344 1448 1268 S   0,0  0,0   0:00.26 avahi-daemon
+ 1187 avahi     20   0 32224  212  156 S   0,0  0,0   0:00.00 avahi-daemon
+ 1237 root      20   0 72280 2868 2120 S   0,0  0,1   0:00.07 cupsd
+ 1240 root      10 -10     0    0    0 S   0,0  0,0   0:00.00 krfcommd
+ 1242 root      20   0 20028  792  788 S   0,0  0,0   0:00.00 getty
+ 1251 root      20   0 20028  792  788 S   0,0  0,0   0:00.00 getty
+ 1268 root      20   0 20028  792  788 S   0,0  0,0   0:00.00 getty
+ 1270 root      20   0 20028  792  788 S   0,0  0,0   0:00.00 getty
+ 1273 root      20   0 20028  792  788 S   0,0  0,0   0:00.00 getty
+ 1280 root      20   0 70432 1964 1856 S   0,0  0,1   0:00.06 cups-browsed
+ 1291 mongodb   20   0  341m  10m 3120 S   0,0  0,3   0:50.53 mongod
+ 1293 root      20   0  4636  932  556 S   0,0  0,0   0:00.08 acpid
+ 1305 root      20   0 21328  872  780 S   0,0  0,0   0:00.02 cron
+ 1306 daemon    20   0 19128   12    0 S   0,0  0,0   0:00.00 atd
+ 1325 mysql     20   0  857m  40m 4212 S   0,0  1,1   0:22.87 mysqld
+ 1330 root      20   0 19152  612  516 S   0,0  0,0   0:00.80 irqbalance
+ 1334 root      20   0  249m 5272 3940 S   0,0  0,1   0:04.90 NetworkManager
+ 1348 root      20   0  269m 3428 2600 S   0,0  0,1   0:00.04 lightdm
+ 1366 root      20   0  123m 3232 2808 S   0,0  0,1   0:00.08 smbd
+ 1369 whoopsie  20   0  290m 4348 3732 S   0,0  0,1   0:00.62 whoopsie
+ 1386 root      20   0  192m 5484 2980 S   0,0  0,1   0:15.13 polkitd
+ 1399 colord    20   0  211m 4952 3700 S   0,0  0,1   0:00.45 colord
+ 1446 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 iprt
+ 1479 root      20   0  123m  932  580 S   0,0  0,0   0:00.00 smbd
+ 1563 root      20   0 32040 2176 1580 S   0,0  0,1   0:00.61 wpa_supplicant
+ 1678 root      20   0  258m 3588 2748 S   0,0  0,1   0:00.41 accounts-daemon
+ 1719 root      20   0  217m  14m 4996 S   0,0  0,4   0:00.45 apache2
+ 1749 root      35  15 22416 8588  976 S   0,0  0,2   0:09.54 preload
+ 1753 nobody    20   0 33100 1460 1208 S   0,0  0,0   0:00.37 dnsmasq
+ 1771 root      20   0     0    0    0 S   0,0  0,0   0:00.00 kauditd
+ 1920 root      20   0 2042m 4004 2892 S   0,0  0,1   0:04.57 console-kit-dae
+ 2021 root      20   0 20028  952  788 S   0,0  0,0   0:00.00 getty
+ 2543 root      20   0  217m 4528 3408 S   0,0  0,1   0:01.47 upowerd
+ 2896 rtkit     21   1  164m 1336 1100 S   0,0  0,0   0:00.09 rtkit-daemon
+ 2934 root      20   0 89192 1824 1056 S   0,0  0,0   0:00.61 nmbd
+ 2951 root      20   0  102m 3304 2404 S   0,0  0,1   0:00.02 winbindd
+ 2958 root      20   0  102m 1708  800 S   0,0  0,0   0:00.00 winbindd
+ 3827 root      20   0  416m 5360 3196 S   0,0  0,1   0:03.41 udisksd
+ 5080 root      20   0     0    0    0 S   0,0  0,0   0:00.11 kworker/1:0
+ 5092 root      20   0 10244 3204  908 S   0,0  0,1   0:00.01 dhclient
+ 5502 jean      30  10  631m  18m  12m S   0,0  0,5   0:00.63 deja-dup
+ 5845 root      rt   0     0    0    0 S   0,0  0,0   0:00.00 watchdog/0
+ 5848 root      rt   0     0    0    0 S   0,0  0,0   0:00.00 watchdog/1
+ 5849 root      rt   0     0    0    0 S   0,0  0,0   0:00.00 watchdog/2
+ 5850 root      rt   0     0    0    0 S   0,0  0,0   0:00.00 watchdog/3
+ 6006 root      20   0     0    0    0 S   0,0  0,0   0:02.40 kworker/u16:2
+ 6260 root      20   0     0    0    0 S   0,0  0,0   0:00.66 kworker/2:2
+ 6584 jean      20   0  493m  44m  16m S   0,0  1,2   0:38.43 plugin-containe
+ 6603 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kworker/1:1H
+ 6604 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kworker/2:1H
+ 6605 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kworker/3:1H
+ 6744 www-data  20   0  220m  15m 3208 S   0,0  0,4   0:00.09 apache2
+ 7141 jean      20   0 46528 3684 2176 S   0,0  0,1   0:00.38 ssh
+ 7258 root      20   0     0    0    0 S   0,0  0,0   0:00.00 scsi_eh_15
+ 7259 root      20   0     0    0    0 S   0,0  0,0   0:00.06 usb-storage
+ 7272 root      20   0 21748  684  356 S   0,0  0,0   0:00.00 udevd
+ 7277 root      20   0 21748  652  328 S   0,0  0,0   0:00.00 udevd
+ 7855 root     -51   0     0    0    0 S   0,0  0,0   0:30.62 irq/46-iwlwifi
+ 7858 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 iwlwifi
+ 8303 jean      20   0 26548 3628 1788 S   0,0  0,1   0:00.13 bash
+ 8490 root      20   0     0    0    0 S   0,0  0,0   0:00.00 kworker/1:2
+ 8544 root       0 -20     0    0    0 S   0,0  0,0   0:00.02 kworker/u17:1
+ 8584 jean      20   0 1086m 202m  34m S   0,0  5,6   1:02.01 thunderbird
+ 8780 jean      20   0  791m  10m 5460 S   0,0  0,3   0:00.36 evolution-addre
+ 9891 www-data  20   0  217m  11m 1416 S   0,0  0,3   0:00.00 apache2
+ 9894 www-data  20   0  226m  16m 4104 S   0,0  0,4   0:01.13 apache2
+ 9897 www-data  20   0  226m  15m 3712 S   0,0  0,4   0:00.12 apache2
+10146 root      20   0     0    0    0 S   0,0  0,0   0:00.16 kworker/0:2
+10438 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 cifsiod
+10439 root      20   0     0    0    0 S   0,0  0,0   0:00.15 cifsd
+10648 jean      20   0 1020m  41m  14m S   0,0  1,1   0:01.54 sublime_text
+10678 jean      20   0  278m  24m 2956 S   0,0  0,7   0:03.10 plugin_host
+11484 root      20   0     0    0    0 S   0,0  0,0   0:01.06 kworker/u16:1
+11588 root      20   0     0    0    0 S   0,0  0,0   0:00.00 kworker/2:1
+11850 root      20   0     0    0    0 S   0,0  0,0   0:00.15 kworker/0:0
+12269 www-data  20   0  217m  11m 1408 S   0,0  0,3   0:00.00 apache2
+12340 root      20   0     0    0    0 S   0,0  0,0   0:00.58 kworker/u16:3
+12369 root      20   0     0    0    0 S   0,0  0,0   0:00.00 kworker/3:0
+12558 jean      20   0 16576 1440 1220 S   0,0  0,0   0:00.00 mysql-workbench
+12562 jean      20   0  4444  628  524 S   0,0  0,0   0:00.00 catchsegv
+12564 jean      20   0 1271m  76m  43m S   0,0  2,1   0:02.50 mysql-workbench
+12719 root      20   0  168m 3744 2772 S   0,0  0,1   0:00.01 lightdm
+12730 root      20   0     0    0    0 S   0,0  0,0   0:00.06 kworker/0:1
+12845 root      20   0     0    0    0 S   0,0  0,0   0:00.00 kworker/0:3
+12926 www-data  20   0  217m  10m 1304 S   0,0  0,3   0:00.00 apache2
+12953 www-data  20   0  217m   9m  388 S   0,0  0,3   0:00.00 apache2
+13298 root      20   0     0    0    0 S   0,0  0,0   0:00.03 kworker/u16:0
+13871 jean      20   0  513m 8400 3200 S   0,0  0,2   0:00.84 gnome-keyring-d
+13882 jean      20   0  417m  10m 7312 S   0,0  0,3   0:00.79 gnome-session
+13927 jean      20   0 12616  320    0 S   0,0  0,0   0:00.01 ssh-agent
+13930 jean      20   0 24468  572  312 S   0,0  0,0   0:00.00 dbus-launch
+13931 jean      20   0 28616 4988  756 S   0,0  0,1   0:30.77 dbus-daemon
+13941 jean      20   0  329m 3112 2592 S   0,0  0,1   0:00.00 at-spi-bus-laun
+13945 jean      20   0 24120 1704 1296 S   0,0  0,0   0:00.11 dbus-daemon
+13948 jean      20   0  121m 3292 2736 S   0,0  0,1   0:00.19 at-spi2-registr
+13961 jean      20   0  863m  21m  11m S   0,0  0,6   0:04.66 gnome-settings-
+13969 jean      20   0  421m 6428 4032 S   0,0  0,2   1:47.98 pulseaudio
+13974 jean      20   0  191m 3116 2496 S   0,0  0,1   0:00.11 gvfsd
+13978 jean      20   0  328m 2988 2432 S   0,0  0,1   0:00.00 gvfsd-fuse
+14001 jean      20   0  174m 3100 2148 S   0,0  0,1   0:00.34 dconf-service
+14006 jean      20   0 1263m  31m  13m S   0,0  0,9   0:23.70 nm-applet
+14009 jean      20   0  334m 9416 6780 S   0,0  0,3   0:00.33 polkit-gnome-au
+14013 jean      20   0  426m 7616 5464 S   0,0  0,2   1:27.35 conky
+14025 jean      20   0  478m 9908 7072 S   0,0  0,3   0:00.16 gnome-fallback-
+14044 jean      20   0  705m  20m 8796 S   0,0  0,6   0:12.43 python
+14068 jean      20   0  466m  12m 8848 S   0,0  0,4   1:35.26 indicator-multi
+14198 jean      20   0 58088 3688 2056 S   0,0  0,1   0:00.08 gconfd-2
+14233 jean      20   0  281m 5292 3380 S   0,0  0,1   0:00.13 gvfs-udisks2-vo
+14271 jean      20   0  198m 3172 2476 S   0,0  0,1   0:00.02 gvfs-gphoto2-vo
+14291 jean      20   0  186m 2960 2412 S   0,0  0,1   0:00.02 gvfs-mtp-volume
+14309 jean      20   0  278m 3240 2616 S   0,0  0,1   0:00.02 gvfs-afc-volume
+14386 jean      20   0  263m 2896 2360 S   0,0  0,1   0:00.00 gvfsd-burn
+14425 jean      20   0  422m  18m  12m S   0,0  0,5   0:06.18 notify-osd
+14431 jean      20   0  271m 5616 2956 S   0,0  0,2   0:00.58 gvfsd-trash
+14436 jean      20   0  543m  12m 7840 S   0,0  0,3   0:07.59 bamfdaemon
+14440 jean      20   0  416m  33m  20m S   0,0  0,9   0:02.17 gnome-screensav
+14506 jean      20   0  4444  528  524 S   0,0  0,0   0:00.00 sh
+14507 jean      20   0  411m  16m  10m S   0,0  0,5   0:03.09 gtk-window-deco
+14512 jean      20   0  609m  54m  12m S   0,0  1,5   2:57.04 unity-panel-ser
+14517 jean      20   0  617m  16m 3428 S   0,0  0,5   1:56.37 hud-service
+14534 jean      20   0  376m 4592 4360 S   0,0  0,1   0:00.02 indicator-sync-
+14540 jean      20   0  452m 5320 4596 S   0,0  0,1   0:00.01 indicator-bluet
+14542 jean      20   0  620m 7980 6180 S   0,0  0,2   0:00.21 indicator-datet
+14544 jean      20   0  533m 5900 4940 S   0,0  0,2   0:01.09 indicator-sessi
+14545 jean      20   0  562m 8804 6724 S   0,0  0,2   0:00.33 indicator-sound
+14546 jean      20   0  456m  10m 7744 S   0,0  0,3   0:00.14 indicator-print
+14547 jean      20   0  583m 5780 4756 S   0,0  0,2   0:31.75 indicator-appli
+14548 jean      20   0  527m 7272 5584 S   0,0  0,2   0:00.10 indicator-messa
+14567 jean      20   0  773m 6024 3908 S   0,0  0,2   0:00.07 evolution-sourc
+14639 jean      20   0  498m  10m 7628 S   0,0  0,3   0:00.12 telepathy-indic
+14646 jean      20   0  315m 5872 4044 S   0,0  0,2   0:00.84 mission-control
+14655 jean      20   0  581m  22m  12m S   0,0  0,6   0:09.54 gnome-terminal
+14667 jean      20   0  530m 6420 4872 S   0,0  0,2   0:00.37 unity-files-dae
+14668 jean      20   0  406m  13m 5180 S   0,0  0,4   0:01.25 unity-applicati
+14669 jean      20   0  810m  32m 5424 S   0,0  0,9   0:01.76 unity-lens-frie
+14697 jean      20   0  333m 7952 3556 S   0,0  0,2   0:01.03 zeitgeist-daemo
+14704 jean      20   0  443m 8908 5348 S   0,0  0,2   0:05.79 zeitgeist-datah
+14705 jean      20   0  231m 9320 5320 S   0,0  0,3   0:00.87 zeitgeist-fts
+14711 jean      20   0 11424  628  532 S   0,0  0,0   0:00.00 cat
+14714 jean      20   0 14836  840  676 S   0,0  0,0   0:00.00 gnome-pty-helpe
+14715 jean      20   0 26492 3428 1652 S   0,0  0,1   0:00.09 bash
+14767 jean      20   0  381m  18m 5684 S   0,0  0,5   0:07.19 friends-service
+14798 jean      20   0  264m 3528 2964 S   0,0  0,1   0:00.61 glib-pacrunner
+14804 jean      20   0  577m  14m 6052 S   0,0  0,4   0:00.43 unity-scope-gdr
+14837 jean      20   0  117m 3676 2652 S   0,0  0,1   0:00.19 gvfsd-metadata
+14903 jean      20   0  477m  38m 6980 S   0,0  1,0   0:01.36 ubuntuone-syncd
+14975 jean      20   0  376m 5648 4388 S   0,0  0,2   0:00.05 gvfsd-http
+15097 jean      20   0  503m  13m  10m S   0,0  0,4   0:00.33 update-notifier
+15132 jean      30  10  661m  61m  13m S   0,0  1,7   0:10.71 update-manager
+15349 jean      20   0 1740m 159m  30m S   0,0  4,4   0:22.05 sublime2
+15430 jean      20   0  375m 4852 3848 S   0,0  0,1   0:00.16 deja-dup-monito
+15977 jean      20   0  156m 5104 2936 S   0,0  0,1   0:00.03 kdeinit4
+15978 jean      20   0  188m 7092 4608 S   0,0  0,2   0:00.19 klauncher
+15991 jean      20   0  533m  17m  11m S   0,0  0,5   0:00.66 kded4
+16086 root      20   0  188m 3872 2992 S   0,0  0,1   0:00.74 udisks-daemon
+16087 root      20   0 45656  784  436 S   0,0  0,0   0:00.00 udisks-daemon
+16096 jean      20   0 1104m  19m  12m S   0,0  0,5   0:01.65 kactivitymanage
+17675 jean      20   0  538m  18m  12m S   0,0  0,5   0:00.36 kuiserver
+20331 www-data  20   0  227m  23m 3668 S   0,0  0,6   0:00.48 apache2
+20332 www-data  20   0  229m  18m 3656 S   0,0  0,5   0:00.25 apache2
+20333 www-data  20   0  233m  22m 4196 S   0,0  0,6   0:02.36 apache2
+22709 root       0 -20     0    0    0 S   0,0  0,0   0:00.05 kworker/u17:2
+24616 jean      20   0  250m 2836 2368 S   0,0  0,1   0:00.00 unity-webapps-s
+25115 root     -51   0     0    0    0 S   0,0  0,0   0:00.00 irq/43-mei_me
+
+top - 13:55:23 up 18:04,  4 users,  load average: 0,53, 0,93, 1,07
+Tasks: 252 total,   1 running, 251 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  6,3 us,  2,8 sy,  0,0 ni, 89,1 id,  1,8 wa,  0,0 hi,  0,0 si,  0,0 st
+KiB Mem:   3711956 total,  3475696 used,   236260 free,    67476 buffers
+KiB Swap:  3905532 total,    89260 used,  3816272 free,  1635988 cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S  %CPU %MEM    TIME+  COMMAND
+24591 jean      20   0 1301m 346m  33m S   8,7  9,6  13:19.87 firefox
+12618 root      20   0  495m  82m  50m S   3,9  2,3   8:10.22 Xorg
+13995 jean      20   0 1292m  70m  18m S   3,5  1,9   7:01.19 compiz
+ 6703 jean      20   0 1539m  43m  14m S   3,4  1,2   1:04.94 transmission-gt
+ 8049 jean      20   0 2100m 105m  29m S   2,9  2,9   1:09.76 rhythmbox
+ 7855 root     -51   0     0    0    0 S   1,9  0,0   0:30.81 irq/46-iwlwifi
+13969 jean      20   0  421m 6428 4032 S   1,3  0,2   1:48.11 pulseaudio
+ 6584 jean      20   0  493m  44m  16m S   1,1  1,2   0:38.54 plugin-containe
+14512 jean      20   0  609m  54m  12m S   1,1  1,5   2:57.15 unity-panel-ser
+14655 jean      20   0  581m  22m  12m S   0,9  0,6   0:09.63 gnome-terminal
+13412 jean      20   0 26528 3676 1856 S   0,8  0,1   0:00.08 bash
+14068 jean      20   0  466m  12m 8848 S   0,8  0,4   1:35.34 indicator-multi
+14013 jean      20   0  426m 7616 5464 S   0,7  0,2   1:27.42 conky
+14517 jean      20   0  617m  16m 3428 S   0,7  0,5   1:56.44 hud-service
+ 1291 mongodb   20   0  341m  10m 3120 S   0,4  0,3   0:50.57 mongod
+13931 jean      20   0 28616 4988  756 S   0,3  0,1   0:30.80 dbus-daemon
+  969 root      20   0 23960 4132  704 S   0,2  0,1   1:34.00 mount.ntfs-3g
+14547 jean      20   0  583m 5780 4756 S   0,2  0,2   0:31.77 indicator-appli
+   17 root      20   0     0    0    0 S   0,1  0,0   0:13.11 rcu_sched
+  321 root      20   0     0    0    0 S   0,1  0,0   0:00.74 jbd2/sda2-8
+ 1749 root      35  15 22416 8588  976 S   0,1  0,2   0:09.55 preload
+ 6006 root      20   0     0    0    0 S   0,1  0,0   0:02.41 kworker/u16:2
+12564 jean      20   0 1271m  76m  43m S   0,1  2,1   0:02.51 mysql-workbench
+13402 jean      20   0 24836 1616 1128 R   0,1  0,0   0:00.02 top
+13948 jean      20   0  121m 3292 2736 S   0,1  0,1   0:00.20 at-spi2-registr
+13961 jean      20   0  863m  21m  11m S   0,1  0,6   0:04.67 gnome-settings-
+14006 jean      20   0 1263m  31m  13m S   0,1  0,9   0:23.71 nm-applet
+14044 jean      20   0  705m  20m 8796 S   0,1  0,6   0:12.44 python
+    1 root      20   0 27172 2544 1272 S   0,0  0,1   0:01.68 init
+    2 root      20   0     0    0    0 S   0,0  0,0   0:00.00 kthreadd
+    3 root      20   0     0    0    0 S   0,0  0,0   0:00.28 ksoftirqd/0
+    5 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kworker/0:0H
+    7 root      rt   0     0    0    0 S   0,0  0,0   0:00.04 migration/0
+    8 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcu_bh
+    9 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuob/0
+   10 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuob/1
+   11 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuob/2
+   12 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuob/3
+   13 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuob/4
+   14 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuob/5
+   15 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuob/6
+   16 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuob/7
+   18 root      20   0     0    0    0 S   0,0  0,0   0:04.57 rcuos/0
+   19 root      20   0     0    0    0 S   0,0  0,0   0:03.50 rcuos/1
+   20 root      20   0     0    0    0 S   0,0  0,0   0:04.65 rcuos/2
+   21 root      20   0     0    0    0 S   0,0  0,0   0:03.63 rcuos/3
+   22 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuos/4
+   23 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuos/5
+   24 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuos/6
+   25 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuos/7
+   26 root      rt   0     0    0    0 S   0,0  0,0   0:00.15 migration/1
+   27 root      20   0     0    0    0 S   0,0  0,0   0:00.21 ksoftirqd/1
+   29 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kworker/1:0H
+   30 root      rt   0     0    0    0 S   0,0  0,0   0:00.04 migration/2
+   31 root      20   0     0    0    0 S   0,0  0,0   0:00.31 ksoftirqd/2
+   33 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kworker/2:0H
+   34 root      rt   0     0    0    0 S   0,0  0,0   0:00.15 migration/3
+   35 root      20   0     0    0    0 S   0,0  0,0   0:00.20 ksoftirqd/3
+   37 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kworker/3:0H
+   38 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 khelper
+   39 root      20   0     0    0    0 S   0,0  0,0   0:00.00 kdevtmpfs
+   40 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 netns
+   41 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 writeback
+   42 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kintegrityd
+   43 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 bioset
+   45 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kblockd
+   46 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 ata_sff
+   47 root      20   0     0    0    0 S   0,0  0,0   0:00.05 khubd
+   48 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 md
+   49 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 devfreq_wq
+   52 root      20   0     0    0    0 S   0,0  0,0   0:00.00 khungtaskd
+   53 root      20   0     0    0    0 S   0,0  0,0   0:09.94 kswapd0
+   54 root      25   5     0    0    0 S   0,0  0,0   0:00.00 ksmd
+   55 root      39  19     0    0    0 S   0,0  0,0   0:00.00 khugepaged
+   56 root      20   0     0    0    0 S   0,0  0,0   0:00.00 fsnotify_mark
+   57 root      20   0     0    0    0 S   0,0  0,0   0:00.00 ecryptfs-kthrea
+   58 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 crypto
+   69 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kthrotld
+   74 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 binder
+   94 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 deferwq
+   95 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 charger_manager
+   97 root      20   0     0    0    0 S   0,0  0,0   0:00.42 kworker/3:1
+  284 root      20   0     0    0    0 S   0,0  0,0   0:00.00 scsi_eh_0
+  285 root      20   0     0    0    0 S   0,0  0,0   0:00.00 scsi_eh_1
+  286 root      20   0     0    0    0 S   0,0  0,0   0:00.00 scsi_eh_2
+  287 root      20   0     0    0    0 S   0,0  0,0   0:00.00 scsi_eh_3
+  288 root      20   0     0    0    0 S   0,0  0,0   0:00.00 scsi_eh_4
+  322 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 ext4-rsv-conver
+  323 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 ext4-unrsv-conv
+  365 root      20   0 15272  528  420 S   0,0  0,0   0:00.11 upstart-file-br
+  421 root      20   0 17452  732  616 S   0,0  0,0   0:00.32 upstart-udev-br
+  423 root      20   0 21752 1096  788 S   0,0  0,0   0:00.25 udevd
+  827 root      20   0     0    0    0 S   0,0  0,0   0:00.06 ips-adjust
+  828 root      20   0     0    0    0 S   0,0  0,0   0:00.94 ips-monitor
+  892 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kpsmoused
+  916 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 cfg80211
+  992 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 hd-audio0
+ 1009 root      20   0 52256 1864 1860 S   0,0  0,1   0:00.00 sshd
+ 1049 root      20   0 15260  520  408 S   0,0  0,0   0:00.06 upstart-socket-
+ 1064 syslog    20   0  241m 1108 1032 S   0,0  0,0   0:01.03 rsyslogd
+ 1082 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 ttm_swap
+ 1098 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 hd-audio1
+ 1146 messageb  20   0 25532 2404  920 S   0,0  0,1   0:10.90 dbus-daemon
+ 1177 root      20   0 83412 2496 2136 S   0,0  0,1   0:00.26 modem-manager
+ 1180 root      20   0 19244 1312 1184 S   0,0  0,0   0:00.00 bluetoothd
+ 1184 avahi     20   0 32344 1448 1268 S   0,0  0,0   0:00.26 avahi-daemon
+ 1187 avahi     20   0 32224  212  156 S   0,0  0,0   0:00.00 avahi-daemon
+ 1237 root      20   0 72280 2868 2120 S   0,0  0,1   0:00.07 cupsd
+ 1240 root      10 -10     0    0    0 S   0,0  0,0   0:00.00 krfcommd
+ 1242 root      20   0 20028  792  788 S   0,0  0,0   0:00.00 getty
+ 1251 root      20   0 20028  792  788 S   0,0  0,0   0:00.00 getty
+ 1268 root      20   0 20028  792  788 S   0,0  0,0   0:00.00 getty
+ 1270 root      20   0 20028  792  788 S   0,0  0,0   0:00.00 getty
+ 1273 root      20   0 20028  792  788 S   0,0  0,0   0:00.00 getty
+ 1280 root      20   0 70432 1964 1856 S   0,0  0,1   0:00.06 cups-browsed
+ 1293 root      20   0  4636  932  556 S   0,0  0,0   0:00.08 acpid
+ 1305 root      20   0 21328  872  780 S   0,0  0,0   0:00.02 cron
+ 1306 daemon    20   0 19128   12    0 S   0,0  0,0   0:00.00 atd
+ 1325 mysql     20   0  857m  40m 4212 S   0,0  1,1   0:22.87 mysqld
+ 1330 root      20   0 19152  612  516 S   0,0  0,0   0:00.80 irqbalance
+ 1334 root      20   0  249m 5272 3940 S   0,0  0,1   0:04.90 NetworkManager
+ 1348 root      20   0  269m 3428 2600 S   0,0  0,1   0:00.04 lightdm
+ 1366 root      20   0  123m 3232 2808 S   0,0  0,1   0:00.08 smbd
+ 1369 whoopsie  20   0  290m 4348 3732 S   0,0  0,1   0:00.62 whoopsie
+ 1386 root      20   0  192m 5484 2980 S   0,0  0,1   0:15.13 polkitd
+ 1399 colord    20   0  211m 4952 3700 S   0,0  0,1   0:00.45 colord
+ 1446 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 iprt
+ 1479 root      20   0  123m  932  580 S   0,0  0,0   0:00.00 smbd
+ 1563 root      20   0 32040 2176 1580 S   0,0  0,1   0:00.61 wpa_supplicant
+ 1678 root      20   0  258m 3588 2748 S   0,0  0,1   0:00.41 accounts-daemon
+ 1719 root      20   0  217m  14m 4996 S   0,0  0,4   0:00.45 apache2
+ 1753 nobody    20   0 33100 1460 1208 S   0,0  0,0   0:00.37 dnsmasq
+ 1771 root      20   0     0    0    0 S   0,0  0,0   0:00.00 kauditd
+ 1920 root      20   0 2042m 4004 2892 S   0,0  0,1   0:04.57 console-kit-dae
+ 2021 root      20   0 20028  952  788 S   0,0  0,0   0:00.00 getty
+ 2543 root      20   0  217m 4528 3408 S   0,0  0,1   0:01.47 upowerd
+ 2896 rtkit     21   1  164m 1336 1100 S   0,0  0,0   0:00.09 rtkit-daemon
+ 2934 root      20   0 89192 1824 1056 S   0,0  0,0   0:00.61 nmbd
+ 2951 root      20   0  102m 3304 2404 S   0,0  0,1   0:00.02 winbindd
+ 2958 root      20   0  102m 1708  800 S   0,0  0,0   0:00.00 winbindd
+ 3827 root      20   0  416m 5360 3196 S   0,0  0,1   0:03.41 udisksd
+ 5080 root      20   0     0    0    0 S   0,0  0,0   0:00.11 kworker/1:0
+ 5092 root      20   0 10244 3204  908 S   0,0  0,1   0:00.01 dhclient
+ 5502 jean      30  10  631m  18m  12m S   0,0  0,5   0:00.63 deja-dup
+ 5845 root      rt   0     0    0    0 S   0,0  0,0   0:00.00 watchdog/0
+ 5848 root      rt   0     0    0    0 S   0,0  0,0   0:00.00 watchdog/1
+ 5849 root      rt   0     0    0    0 S   0,0  0,0   0:00.00 watchdog/2
+ 5850 root      rt   0     0    0    0 S   0,0  0,0   0:00.00 watchdog/3
+ 6260 root      20   0     0    0    0 S   0,0  0,0   0:00.66 kworker/2:2
+ 6603 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kworker/1:1H
+ 6604 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kworker/2:1H
+ 6605 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kworker/3:1H
+ 6744 www-data  20   0  220m  15m 3208 S   0,0  0,4   0:00.09 apache2
+ 7141 jean      20   0 46528 3684 2176 S   0,0  0,1   0:00.38 ssh
+ 7258 root      20   0     0    0    0 S   0,0  0,0   0:00.00 scsi_eh_15
+ 7259 root      20   0     0    0    0 S   0,0  0,0   0:00.06 usb-storage
+ 7272 root      20   0 21748  684  356 S   0,0  0,0   0:00.00 udevd
+ 7277 root      20   0 21748  652  328 S   0,0  0,0   0:00.00 udevd
+ 7858 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 iwlwifi
+ 8303 jean      20   0 26548 3628 1788 S   0,0  0,1   0:00.13 bash
+ 8490 root      20   0     0    0    0 S   0,0  0,0   0:00.00 kworker/1:2
+ 8544 root       0 -20     0    0    0 S   0,0  0,0   0:00.02 kworker/u17:1
+ 8584 jean      20   0 1086m 202m  34m S   0,0  5,6   1:02.01 thunderbird
+ 8780 jean      20   0  791m  10m 5460 S   0,0  0,3   0:00.36 evolution-addre
+ 9891 www-data  20   0  217m  11m 1416 S   0,0  0,3   0:00.00 apache2
+ 9894 www-data  20   0  226m  16m 4104 S   0,0  0,4   0:01.13 apache2
+ 9897 www-data  20   0  226m  15m 3712 S   0,0  0,4   0:00.12 apache2
+10146 root      20   0     0    0    0 S   0,0  0,0   0:00.16 kworker/0:2
+10438 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 cifsiod
+10439 root      20   0     0    0    0 S   0,0  0,0   0:00.15 cifsd
+10648 jean      20   0 1020m  41m  14m S   0,0  1,1   0:01.54 sublime_text
+10678 jean      20   0  278m  24m 2956 S   0,0  0,7   0:03.10 plugin_host
+11484 root      20   0     0    0    0 S   0,0  0,0   0:01.06 kworker/u16:1
+11588 root      20   0     0    0    0 S   0,0  0,0   0:00.00 kworker/2:1
+11850 root      20   0     0    0    0 S   0,0  0,0   0:00.15 kworker/0:0
+12269 www-data  20   0  217m  11m 1408 S   0,0  0,3   0:00.00 apache2
+12340 root      20   0     0    0    0 S   0,0  0,0   0:00.58 kworker/u16:3
+12369 root      20   0     0    0    0 S   0,0  0,0   0:00.00 kworker/3:0
+12558 jean      20   0 16576 1440 1220 S   0,0  0,0   0:00.00 mysql-workbench
+12562 jean      20   0  4444  628  524 S   0,0  0,0   0:00.00 catchsegv
+12719 root      20   0  168m 3744 2772 S   0,0  0,1   0:00.01 lightdm
+12730 root      20   0     0    0    0 S   0,0  0,0   0:00.06 kworker/0:1
+12845 root      20   0     0    0    0 S   0,0  0,0   0:00.00 kworker/0:3
+12926 www-data  20   0  217m  10m 1304 S   0,0  0,3   0:00.00 apache2
+12953 www-data  20   0  217m   9m  388 S   0,0  0,3   0:00.00 apache2
+13298 root      20   0     0    0    0 S   0,0  0,0   0:00.03 kworker/u16:0
+13871 jean      20   0  513m 8400 3200 S   0,0  0,2   0:00.84 gnome-keyring-d
+13882 jean      20   0  417m  10m 7312 S   0,0  0,3   0:00.79 gnome-session
+13927 jean      20   0 12616  320    0 S   0,0  0,0   0:00.01 ssh-agent
+13930 jean      20   0 24468  572  312 S   0,0  0,0   0:00.00 dbus-launch
+13941 jean      20   0  329m 3112 2592 S   0,0  0,1   0:00.00 at-spi-bus-laun
+13945 jean      20   0 24120 1704 1296 S   0,0  0,0   0:00.11 dbus-daemon
+13974 jean      20   0  191m 3116 2496 S   0,0  0,1   0:00.11 gvfsd
+13978 jean      20   0  328m 2988 2432 S   0,0  0,1   0:00.00 gvfsd-fuse
+14001 jean      20   0  174m 3100 2148 S   0,0  0,1   0:00.34 dconf-service
+14009 jean      20   0  334m 9416 6780 S   0,0  0,3   0:00.33 polkit-gnome-au
+14025 jean      20   0  478m 9908 7072 S   0,0  0,3   0:00.16 gnome-fallback-
+14037 jean      20   0 1659m  71m  30m S   0,0  2,0   2:51.82 nautilus
+14198 jean      20   0 58088 3688 2056 S   0,0  0,1   0:00.08 gconfd-2
+14233 jean      20   0  281m 5292 3380 S   0,0  0,1   0:00.13 gvfs-udisks2-vo
+14271 jean      20   0  198m 3172 2476 S   0,0  0,1   0:00.02 gvfs-gphoto2-vo
+14291 jean      20   0  186m 2960 2412 S   0,0  0,1   0:00.02 gvfs-mtp-volume
+14309 jean      20   0  278m 3240 2616 S   0,0  0,1   0:00.02 gvfs-afc-volume
+14386 jean      20   0  263m 2896 2360 S   0,0  0,1   0:00.00 gvfsd-burn
+14425 jean      20   0  422m  18m  12m S   0,0  0,5   0:06.18 notify-osd
+14431 jean      20   0  271m 5616 2956 S   0,0  0,2   0:00.58 gvfsd-trash
+14436 jean      20   0  543m  12m 7840 S   0,0  0,3   0:07.59 bamfdaemon
+14440 jean      20   0  416m  33m  20m S   0,0  0,9   0:02.17 gnome-screensav
+14506 jean      20   0  4444  528  524 S   0,0  0,0   0:00.00 sh
+14507 jean      20   0  411m  16m  10m S   0,0  0,5   0:03.09 gtk-window-deco
+14534 jean      20   0  376m 4592 4360 S   0,0  0,1   0:00.02 indicator-sync-
+14540 jean      20   0  452m 5320 4596 S   0,0  0,1   0:00.01 indicator-bluet
+14542 jean      20   0  620m 7980 6180 S   0,0  0,2   0:00.21 indicator-datet
+14544 jean      20   0  533m 5900 4940 S   0,0  0,2   0:01.09 indicator-sessi
+14545 jean      20   0  562m 8804 6724 S   0,0  0,2   0:00.33 indicator-sound
+14546 jean      20   0  456m  10m 7744 S   0,0  0,3   0:00.14 indicator-print
+14548 jean      20   0  527m 7272 5584 S   0,0  0,2   0:00.10 indicator-messa
+14567 jean      20   0  773m 6024 3908 S   0,0  0,2   0:00.07 evolution-sourc
+14639 jean      20   0  498m  10m 7628 S   0,0  0,3   0:00.12 telepathy-indic
+14646 jean      20   0  315m 5872 4044 S   0,0  0,2   0:00.84 mission-control
+14667 jean      20   0  530m 6420 4872 S   0,0  0,2   0:00.37 unity-files-dae
+14668 jean      20   0  406m  13m 5180 S   0,0  0,4   0:01.25 unity-applicati
+14669 jean      20   0  810m  32m 5424 S   0,0  0,9   0:01.76 unity-lens-frie
+14697 jean      20   0  333m 7952 3556 S   0,0  0,2   0:01.03 zeitgeist-daemo
+14704 jean      20   0  443m 8908 5348 S   0,0  0,2   0:05.79 zeitgeist-datah
+14705 jean      20   0  231m 9320 5320 S   0,0  0,3   0:00.87 zeitgeist-fts
+14711 jean      20   0 11424  628  532 S   0,0  0,0   0:00.00 cat
+14714 jean      20   0 14836  840  676 S   0,0  0,0   0:00.00 gnome-pty-helpe
+14715 jean      20   0 26492 3428 1652 S   0,0  0,1   0:00.09 bash
+14767 jean      20   0  381m  18m 5684 S   0,0  0,5   0:07.19 friends-service
+14798 jean      20   0  264m 3528 2964 S   0,0  0,1   0:00.61 glib-pacrunner
+14804 jean      20   0  577m  14m 6052 S   0,0  0,4   0:00.43 unity-scope-gdr
+14837 jean      20   0  117m 3676 2652 S   0,0  0,1   0:00.19 gvfsd-metadata
+14903 jean      20   0  477m  38m 6980 S   0,0  1,0   0:01.36 ubuntuone-syncd
+14975 jean      20   0  376m 5648 4388 S   0,0  0,2   0:00.05 gvfsd-http
+15097 jean      20   0  503m  13m  10m S   0,0  0,4   0:00.33 update-notifier
+15132 jean      30  10  661m  61m  13m S   0,0  1,7   0:10.71 update-manager
+15349 jean      20   0 1740m 159m  30m S   0,0  4,4   0:22.05 sublime2
+15430 jean      20   0  375m 4852 3848 S   0,0  0,1   0:00.16 deja-dup-monito
+15977 jean      20   0  156m 5104 2936 S   0,0  0,1   0:00.03 kdeinit4
+15978 jean      20   0  188m 7092 4608 S   0,0  0,2   0:00.19 klauncher
+15991 jean      20   0  533m  17m  11m S   0,0  0,5   0:00.66 kded4
+16086 root      20   0  188m 3872 2992 S   0,0  0,1   0:00.74 udisks-daemon
+16087 root      20   0 45656  784  436 S   0,0  0,0   0:00.00 udisks-daemon
+16096 jean      20   0 1104m  19m  12m S   0,0  0,5   0:01.65 kactivitymanage
+17675 jean      20   0  538m  18m  12m S   0,0  0,5   0:00.36 kuiserver
+20331 www-data  20   0  227m  23m 3668 S   0,0  0,6   0:00.48 apache2
+20332 www-data  20   0  229m  18m 3656 S   0,0  0,5   0:00.25 apache2
+20333 www-data  20   0  233m  22m 4196 S   0,0  0,6   0:02.36 apache2
+22709 root       0 -20     0    0    0 S   0,0  0,0   0:00.05 kworker/u17:2
+24616 jean      20   0  250m 2836 2368 S   0,0  0,1   0:00.00 unity-webapps-s
+25115 root     -51   0     0    0    0 S   0,0  0,0   0:00.00 irq/43-mei_me
+
+top - 13:55:33 up 18:04,  4 users,  load average: 0,68, 0,95, 1,08
+Tasks: 252 total,   1 running, 251 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  7,2 us,  2,9 sy,  0,0 ni, 89,2 id,  0,7 wa,  0,1 hi,  0,0 si,  0,0 st
+KiB Mem:   3711956 total,  3467344 used,   244612 free,    67820 buffers
+KiB Swap:  3905532 total,    89260 used,  3816272 free,  1632196 cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S  %CPU %MEM    TIME+  COMMAND
+24591 jean      20   0 1301m 342m  33m S  10,4  9,5  13:20.91 firefox
+12618 root      20   0  491m  82m  50m S   5,2  2,3   8:10.74 Xorg
+13995 jean      20   0 1292m  70m  18m S   4,0  1,9   7:01.59 compiz
+ 6703 jean      20   0 1539m  43m  14m S   2,8  1,2   1:05.22 transmission-gt
+ 8049 jean      20   0 2100m 105m  29m S   2,8  2,9   1:10.04 rhythmbox
+14655 jean      20   0  581m  22m  12m S   1,7  0,6   0:09.80 gnome-terminal
+ 7855 root     -51   0     0    0    0 S   1,4  0,0   0:30.95 irq/46-iwlwifi
+13969 jean      20   0  421m 6428 4032 S   1,4  0,2   1:48.25 pulseaudio
+ 6584 jean      20   0  493m  44m  16m S   1,0  1,2   0:38.64 plugin-containe
+14512 jean      20   0  609m  54m  12m S   1,0  1,5   2:57.25 unity-panel-ser
+ 1386 root      20   0  192m 5484 2980 S   0,7  0,1   0:15.20 polkitd
+14068 jean      20   0  466m  12m 8848 S   0,7  0,4   1:35.41 indicator-multi
+14517 jean      20   0  617m  16m 3428 S   0,7  0,5   1:56.51 hud-service
+14013 jean      20   0  426m 7616 5464 S   0,6  0,2   1:27.48 conky
+ 1146 messageb  20   0 25532 2404  920 S   0,5  0,1   0:10.95 dbus-daemon
+ 1291 mongodb   20   0  341m  10m 3120 S   0,4  0,3   0:50.61 mongod
+  969 root      20   0 23960 4132  704 S   0,3  0,1   1:34.03 mount.ntfs-3g
+14547 jean      20   0  583m 5780 4756 S   0,3  0,2   0:31.80 indicator-appli
+ 1920 root      20   0 2042m 4004 2892 S   0,2  0,1   0:04.59 console-kit-dae
+12564 jean      20   0 1271m  76m  43m S   0,2  2,1   0:02.53 mysql-workbench
+13412 jean      20   0 26536 3688 1860 S   0,2  0,1   0:00.10 bash
+13931 jean      20   0 28616 4988  756 S   0,2  0,1   0:30.82 dbus-daemon
+13961 jean      20   0  863m  21m  11m S   0,2  0,6   0:04.69 gnome-settings-
+14044 jean      20   0  705m  20m 8796 S   0,2  0,6   0:12.46 python
+   17 root      20   0     0    0    0 S   0,1  0,0   0:13.12 rcu_sched
+   18 root      20   0     0    0    0 S   0,1  0,0   0:04.58 rcuos/0
+   19 root      20   0     0    0    0 S   0,1  0,0   0:03.51 rcuos/1
+   20 root      20   0     0    0    0 S   0,1  0,0   0:04.66 rcuos/2
+ 1325 mysql     20   0  857m  40m 4212 S   0,1  1,1   0:22.88 mysqld
+ 1334 root      20   0  249m 5272 3940 S   0,1  0,1   0:04.91 NetworkManager
+ 5080 root      20   0     0    0    0 S   0,1  0,0   0:00.12 kworker/1:0
+12340 root      20   0     0    0    0 S   0,1  0,0   0:00.59 kworker/u16:3
+12730 root      20   0     0    0    0 S   0,1  0,0   0:00.07 kworker/0:1
+13402 jean      20   0 24836 1616 1128 R   0,1  0,0   0:00.03 top
+14009 jean      20   0  334m 9416 6780 S   0,1  0,3   0:00.34 polkit-gnome-au
+14436 jean      20   0  543m  12m 7840 S   0,1  0,3   0:07.60 bamfdaemon
+14507 jean      20   0  411m  16m  10m S   0,1  0,5   0:03.10 gtk-window-deco
+16096 jean      20   0 1104m  19m  12m S   0,1  0,5   0:01.66 kactivitymanage
+    1 root      20   0 27172 2544 1272 S   0,0  0,1   0:01.68 init
+    2 root      20   0     0    0    0 S   0,0  0,0   0:00.00 kthreadd
+    3 root      20   0     0    0    0 S   0,0  0,0   0:00.28 ksoftirqd/0
+    5 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kworker/0:0H
+    7 root      rt   0     0    0    0 S   0,0  0,0   0:00.04 migration/0
+    8 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcu_bh
+    9 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuob/0
+   10 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuob/1
+   11 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuob/2
+   12 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuob/3
+   13 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuob/4
+   14 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuob/5
+   15 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuob/6
+   16 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuob/7
+   21 root      20   0     0    0    0 S   0,0  0,0   0:03.63 rcuos/3
+   22 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuos/4
+   23 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuos/5
+   24 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuos/6
+   25 root      20   0     0    0    0 S   0,0  0,0   0:00.00 rcuos/7
+   26 root      rt   0     0    0    0 S   0,0  0,0   0:00.15 migration/1
+   27 root      20   0     0    0    0 S   0,0  0,0   0:00.21 ksoftirqd/1
+   29 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kworker/1:0H
+   30 root      rt   0     0    0    0 S   0,0  0,0   0:00.04 migration/2
+   31 root      20   0     0    0    0 S   0,0  0,0   0:00.31 ksoftirqd/2
+   33 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kworker/2:0H
+   34 root      rt   0     0    0    0 S   0,0  0,0   0:00.15 migration/3
+   35 root      20   0     0    0    0 S   0,0  0,0   0:00.20 ksoftirqd/3
+   37 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kworker/3:0H
+   38 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 khelper
+   39 root      20   0     0    0    0 S   0,0  0,0   0:00.00 kdevtmpfs
+   40 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 netns
+   41 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 writeback
+   42 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kintegrityd
+   43 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 bioset
+   45 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kblockd
+   46 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 ata_sff
+   47 root      20   0     0    0    0 S   0,0  0,0   0:00.05 khubd
+   48 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 md
+   49 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 devfreq_wq
+   52 root      20   0     0    0    0 S   0,0  0,0   0:00.00 khungtaskd
+   53 root      20   0     0    0    0 S   0,0  0,0   0:09.94 kswapd0
+   54 root      25   5     0    0    0 S   0,0  0,0   0:00.00 ksmd
+   55 root      39  19     0    0    0 S   0,0  0,0   0:00.00 khugepaged
+   56 root      20   0     0    0    0 S   0,0  0,0   0:00.00 fsnotify_mark
+   57 root      20   0     0    0    0 S   0,0  0,0   0:00.00 ecryptfs-kthrea
+   58 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 crypto
+   69 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kthrotld
+   74 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 binder
+   94 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 deferwq
+   95 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 charger_manager
+   97 root      20   0     0    0    0 S   0,0  0,0   0:00.42 kworker/3:1
+  284 root      20   0     0    0    0 S   0,0  0,0   0:00.00 scsi_eh_0
+  285 root      20   0     0    0    0 S   0,0  0,0   0:00.00 scsi_eh_1
+  286 root      20   0     0    0    0 S   0,0  0,0   0:00.00 scsi_eh_2
+  287 root      20   0     0    0    0 S   0,0  0,0   0:00.00 scsi_eh_3
+  288 root      20   0     0    0    0 S   0,0  0,0   0:00.00 scsi_eh_4
+  321 root      20   0     0    0    0 S   0,0  0,0   0:00.74 jbd2/sda2-8
+  322 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 ext4-rsv-conver
+  323 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 ext4-unrsv-conv
+  365 root      20   0 15272  528  420 S   0,0  0,0   0:00.11 upstart-file-br
+  421 root      20   0 17452  732  616 S   0,0  0,0   0:00.32 upstart-udev-br
+  423 root      20   0 21752 1096  788 S   0,0  0,0   0:00.25 udevd
+  827 root      20   0     0    0    0 S   0,0  0,0   0:00.06 ips-adjust
+  828 root      20   0     0    0    0 S   0,0  0,0   0:00.94 ips-monitor
+  892 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kpsmoused
+  916 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 cfg80211
+  992 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 hd-audio0
+ 1009 root      20   0 52256 1864 1860 S   0,0  0,1   0:00.00 sshd
+ 1049 root      20   0 15260  520  408 S   0,0  0,0   0:00.06 upstart-socket-
+ 1064 syslog    20   0  241m 1108 1032 S   0,0  0,0   0:01.03 rsyslogd
+ 1082 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 ttm_swap
+ 1098 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 hd-audio1
+ 1177 root      20   0 83412 2496 2136 S   0,0  0,1   0:00.26 modem-manager
+ 1180 root      20   0 19244 1312 1184 S   0,0  0,0   0:00.00 bluetoothd
+ 1184 avahi     20   0 32344 1448 1268 S   0,0  0,0   0:00.26 avahi-daemon
+ 1187 avahi     20   0 32224  212  156 S   0,0  0,0   0:00.00 avahi-daemon
+ 1237 root      20   0 72280 2868 2120 S   0,0  0,1   0:00.07 cupsd
+ 1240 root      10 -10     0    0    0 S   0,0  0,0   0:00.00 krfcommd
+ 1242 root      20   0 20028  792  788 S   0,0  0,0   0:00.00 getty
+ 1251 root      20   0 20028  792  788 S   0,0  0,0   0:00.00 getty
+ 1268 root      20   0 20028  792  788 S   0,0  0,0   0:00.00 getty
+ 1270 root      20   0 20028  792  788 S   0,0  0,0   0:00.00 getty
+ 1273 root      20   0 20028  792  788 S   0,0  0,0   0:00.00 getty
+ 1280 root      20   0 70432 1964 1856 S   0,0  0,1   0:00.06 cups-browsed
+ 1293 root      20   0  4636  932  556 S   0,0  0,0   0:00.08 acpid
+ 1305 root      20   0 21328  872  780 S   0,0  0,0   0:00.02 cron
+ 1306 daemon    20   0 19128   12    0 S   0,0  0,0   0:00.00 atd
+ 1330 root      20   0 19152  612  516 S   0,0  0,0   0:00.80 irqbalance
+ 1348 root      20   0  269m 3428 2600 S   0,0  0,1   0:00.04 lightdm
+ 1366 root      20   0  123m 3232 2808 S   0,0  0,1   0:00.08 smbd
+ 1369 whoopsie  20   0  290m 4348 3732 S   0,0  0,1   0:00.62 whoopsie
+ 1399 colord    20   0  211m 4952 3700 S   0,0  0,1   0:00.45 colord
+ 1446 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 iprt
+ 1479 root      20   0  123m  932  580 S   0,0  0,0   0:00.00 smbd
+ 1563 root      20   0 32040 2176 1580 S   0,0  0,1   0:00.61 wpa_supplicant
+ 1678 root      20   0  258m 3588 2748 S   0,0  0,1   0:00.41 accounts-daemon
+ 1719 root      20   0  217m  14m 4996 S   0,0  0,4   0:00.45 apache2
+ 1749 root      35  15 22416 8588  976 S   0,0  0,2   0:09.55 preload
+ 1753 nobody    20   0 33100 1460 1208 S   0,0  0,0   0:00.37 dnsmasq
+ 1771 root      20   0     0    0    0 S   0,0  0,0   0:00.00 kauditd
+ 2021 root      20   0 20028  952  788 S   0,0  0,0   0:00.00 getty
+ 2543 root      20   0  217m 4528 3408 S   0,0  0,1   0:01.47 upowerd
+ 2896 rtkit     21   1  164m 1336 1100 S   0,0  0,0   0:00.09 rtkit-daemon
+ 2934 root      20   0 89192 1824 1056 S   0,0  0,0   0:00.61 nmbd
+ 2951 root      20   0  102m 3304 2404 S   0,0  0,1   0:00.02 winbindd
+ 2958 root      20   0  102m 1708  800 S   0,0  0,0   0:00.00 winbindd
+ 3827 root      20   0  416m 5360 3196 S   0,0  0,1   0:03.41 udisksd
+ 5092 root      20   0 10244 3204  908 S   0,0  0,1   0:00.01 dhclient
+ 5502 jean      30  10  631m  18m  12m S   0,0  0,5   0:00.63 deja-dup
+ 5845 root      rt   0     0    0    0 S   0,0  0,0   0:00.00 watchdog/0
+ 5848 root      rt   0     0    0    0 S   0,0  0,0   0:00.00 watchdog/1
+ 5849 root      rt   0     0    0    0 S   0,0  0,0   0:00.00 watchdog/2
+ 5850 root      rt   0     0    0    0 S   0,0  0,0   0:00.00 watchdog/3
+ 6006 root      20   0     0    0    0 S   0,0  0,0   0:02.41 kworker/u16:2
+ 6260 root      20   0     0    0    0 S   0,0  0,0   0:00.66 kworker/2:2
+ 6603 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kworker/1:1H
+ 6604 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kworker/2:1H
+ 6605 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 kworker/3:1H
+ 6744 www-data  20   0  220m  15m 3208 S   0,0  0,4   0:00.09 apache2
+ 7141 jean      20   0 46528 3684 2176 S   0,0  0,1   0:00.38 ssh
+ 7258 root      20   0     0    0    0 S   0,0  0,0   0:00.00 scsi_eh_15
+ 7259 root      20   0     0    0    0 S   0,0  0,0   0:00.06 usb-storage
+ 7272 root      20   0 21748  684  356 S   0,0  0,0   0:00.00 udevd
+ 7277 root      20   0 21748  652  328 S   0,0  0,0   0:00.00 udevd
+ 7858 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 iwlwifi
+ 8303 jean      20   0 26548 3628 1788 S   0,0  0,1   0:00.13 bash
+ 8490 root      20   0     0    0    0 S   0,0  0,0   0:00.00 kworker/1:2
+ 8544 root       0 -20     0    0    0 S   0,0  0,0   0:00.02 kworker/u17:1
+ 8584 jean      20   0 1086m 202m  34m S   0,0  5,6   1:02.01 thunderbird
+ 8780 jean      20   0  791m  10m 5460 S   0,0  0,3   0:00.36 evolution-addre
+ 9891 www-data  20   0  217m  11m 1416 S   0,0  0,3   0:00.00 apache2
+ 9894 www-data  20   0  226m  16m 4104 S   0,0  0,4   0:01.13 apache2
+ 9897 www-data  20   0  226m  15m 3712 S   0,0  0,4   0:00.12 apache2
+10146 root      20   0     0    0    0 S   0,0  0,0   0:00.16 kworker/0:2
+10438 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 cifsiod
+10439 root      20   0     0    0    0 S   0,0  0,0   0:00.15 cifsd
+10648 jean      20   0 1020m  41m  14m S   0,0  1,1   0:01.54 sublime_text
+10678 jean      20   0  278m  24m 2956 S   0,0  0,7   0:03.10 plugin_host
+11484 root      20   0     0    0    0 S   0,0  0,0   0:01.06 kworker/u16:1
+11588 root      20   0     0    0    0 S   0,0  0,0   0:00.00 kworker/2:1
+11850 root      20   0     0    0    0 S   0,0  0,0   0:00.15 kworker/0:0
+12269 www-data  20   0  217m  11m 1408 S   0,0  0,3   0:00.00 apache2
+12369 root      20   0     0    0    0 S   0,0  0,0   0:00.00 kworker/3:0
+12558 jean      20   0 16576 1440 1220 S   0,0  0,0   0:00.00 mysql-workbench
+12562 jean      20   0  4444  628  524 S   0,0  0,0   0:00.00 catchsegv
+12719 root      20   0  168m 3744 2772 S   0,0  0,1   0:00.01 lightdm
+12845 root      20   0     0    0    0 S   0,0  0,0   0:00.00 kworker/0:3
+12926 www-data  20   0  217m  10m 1304 S   0,0  0,3   0:00.00 apache2
+12953 www-data  20   0  217m   9m  388 S   0,0  0,3   0:00.00 apache2
+13298 root      20   0     0    0    0 S   0,0  0,0   0:00.03 kworker/u16:0
+13871 jean      20   0  513m 8400 3200 S   0,0  0,2   0:00.84 gnome-keyring-d
+13882 jean      20   0  417m  10m 7312 S   0,0  0,3   0:00.79 gnome-session
+13927 jean      20   0 12616  320    0 S   0,0  0,0   0:00.01 ssh-agent
+13930 jean      20   0 24468  572  312 S   0,0  0,0   0:00.00 dbus-launch
+13941 jean      20   0  329m 3112 2592 S   0,0  0,1   0:00.00 at-spi-bus-laun
+13945 jean      20   0 24120 1704 1296 S   0,0  0,0   0:00.11 dbus-daemon
+13948 jean      20   0  121m 3292 2736 S   0,0  0,1   0:00.20 at-spi2-registr
+13974 jean      20   0  191m 3116 2496 S   0,0  0,1   0:00.11 gvfsd
+13978 jean      20   0  328m 2988 2432 S   0,0  0,1   0:00.00 gvfsd-fuse
+14001 jean      20   0  174m 3100 2148 S   0,0  0,1   0:00.34 dconf-service
+14006 jean      20   0 1263m  31m  13m S   0,0  0,9   0:23.71 nm-applet
+14025 jean      20   0  478m 9908 7072 S   0,0  0,3   0:00.16 gnome-fallback-
+14037 jean      20   0 1659m  71m  30m S   0,0  2,0   2:51.82 nautilus
+14198 jean      20   0 58088 3688 2056 S   0,0  0,1   0:00.08 gconfd-2
+14233 jean      20   0  281m 5292 3380 S   0,0  0,1   0:00.13 gvfs-udisks2-vo
+14271 jean      20   0  198m 3172 2476 S   0,0  0,1   0:00.02 gvfs-gphoto2-vo
+14291 jean      20   0  186m 2960 2412 S   0,0  0,1   0:00.02 gvfs-mtp-volume
+14309 jean      20   0  278m 3240 2616 S   0,0  0,1   0:00.02 gvfs-afc-volume
+14386 jean      20   0  263m 2896 2360 S   0,0  0,1   0:00.00 gvfsd-burn
+14425 jean      20   0  422m  18m  12m S   0,0  0,5   0:06.18 notify-osd
+14431 jean      20   0  271m 5616 2956 S   0,0  0,2   0:00.58 gvfsd-trash
+14440 jean      20   0  416m  33m  20m S   0,0  0,9   0:02.17 gnome-screensav
+14506 jean      20   0  4444  528  524 S   0,0  0,0   0:00.00 sh
+14534 jean      20   0  376m 4592 4360 S   0,0  0,1   0:00.02 indicator-sync-
+14540 jean      20   0  452m 5320 4596 S   0,0  0,1   0:00.01 indicator-bluet
+14542 jean      20   0  620m 7980 6180 S   0,0  0,2   0:00.21 indicator-datet
+14544 jean      20   0  533m 5900 4940 S   0,0  0,2   0:01.09 indicator-sessi
+14545 jean      20   0  562m 8804 6724 S   0,0  0,2   0:00.33 indicator-sound
+14546 jean      20   0  456m  10m 7744 S   0,0  0,3   0:00.14 indicator-print
+14548 jean      20   0  527m 7272 5584 S   0,0  0,2   0:00.10 indicator-messa
+14567 jean      20   0  773m 6024 3908 S   0,0  0,2   0:00.07 evolution-sourc
+14639 jean      20   0  498m  10m 7628 S   0,0  0,3   0:00.12 telepathy-indic
+14646 jean      20   0  315m 5872 4044 S   0,0  0,2   0:00.84 mission-control
+14667 jean      20   0  530m 6420 4872 S   0,0  0,2   0:00.37 unity-files-dae
+14668 jean      20   0  406m  13m 5180 S   0,0  0,4   0:01.25 unity-applicati
+14669 jean      20   0  810m  32m 5424 S   0,0  0,9   0:01.76 unity-lens-frie
+14697 jean      20   0  333m 7952 3556 S   0,0  0,2   0:01.03 zeitgeist-daemo
+14704 jean      20   0  443m 8908 5348 S   0,0  0,2   0:05.79 zeitgeist-datah
+14705 jean      20   0  231m 9320 5320 S   0,0  0,3   0:00.87 zeitgeist-fts
+14711 jean      20   0 11424  628  532 S   0,0  0,0   0:00.00 cat
+14714 jean      20   0 14836  840  676 S   0,0  0,0   0:00.00 gnome-pty-helpe
+14715 jean      20   0 26492 3428 1652 S   0,0  0,1   0:00.09 bash
+14767 jean      20   0  381m  18m 5684 S   0,0  0,5   0:07.19 friends-service
+14798 jean      20   0  264m 3528 2964 S   0,0  0,1   0:00.61 glib-pacrunner
+14804 jean      20   0  577m  14m 6052 S   0,0  0,4   0:00.43 unity-scope-gdr
+14837 jean      20   0  117m 3676 2652 S   0,0  0,1   0:00.19 gvfsd-metadata
+14903 jean      20   0  477m  38m 6980 S   0,0  1,0   0:01.36 ubuntuone-syncd
+14975 jean      20   0  376m 5648 4388 S   0,0  0,2   0:00.05 gvfsd-http
+15097 jean      20   0  503m  13m  10m S   0,0  0,4   0:00.33 update-notifier
+15132 jean      30  10  661m  61m  13m S   0,0  1,7   0:10.71 update-manager
+15349 jean      20   0 1740m 159m  30m S   0,0  4,4   0:22.05 sublime2
+15430 jean      20   0  375m 4852 3848 S   0,0  0,1   0:00.16 deja-dup-monito
+15977 jean      20   0  156m 5104 2936 S   0,0  0,1   0:00.03 kdeinit4
+15978 jean      20   0  188m 7092 4608 S   0,0  0,2   0:00.19 klauncher
+15991 jean      20   0  533m  17m  11m S   0,0  0,5   0:00.66 kded4
+16086 root      20   0  188m 3872 2992 S   0,0  0,1   0:00.74 udisks-daemon
+16087 root      20   0 45656  784  436 S   0,0  0,0   0:00.00 udisks-daemon
+17675 jean      20   0  538m  18m  12m S   0,0  0,5   0:00.36 kuiserver
+20331 www-data  20   0  227m  23m 3668 S   0,0  0,6   0:00.48 apache2
+20332 www-data  20   0  229m  18m 3656 S   0,0  0,5   0:00.25 apache2
+20333 www-data  20   0  233m  22m 4196 S   0,0  0,6   0:02.36 apache2
+22709 root       0 -20     0    0    0 S   0,0  0,0   0:00.05 kworker/u17:2
+24616 jean      20   0  250m 2836 2368 S   0,0  0,1   0:00.00 unity-webapps-s
+25115 root     -51   0     0    0    0 S   0,0  0,0   0:00.00 irq/43-mei_me
