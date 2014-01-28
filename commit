@@ -1,9 +1,8 @@
 #! /bin/bash
 
-#variáveis
-varDate=$(date)
-varMessageDef="mensagem automática jean - $varDate"
-varDir=$(pwd)
+now=$(date)
+defaultMessage="mensagem automática jean - $now"
+dir=$(pwd)
 branch=$(git branch | grep \* | cut -f2 -d ' ')
 branchesList="";
 
@@ -24,7 +23,6 @@ do
 	fi
 done;
 
-#end variáveis
 
 read -p "Branch padrão <$branch>, para sobreescrever digite seu nome. Branches atualmente disponíveis <$branchesList>" newBranch
 
@@ -33,17 +31,18 @@ then
 	branch=$newBranch
 fi
 
-echo "Efetuando pull, diretório atual: $varDir "
+echo "Efetuando pull, diretório atual: $dir "
 git pull origin $branch
 
 echo "Efetuando o add . " 
 git add . 
 
 # pega a mensagem do commit do usuário
-read -p "mensagem do commit default <$varMessageDef>" varMessage
+read -p "mensagem do commit default <$defaultMessage>" varMessage
 
-if [[ ! $varMessage ]]; then
-    varMessage=$varMessageDef
+if [[ ! $varMessage ]]
+then
+    varMessage=$defaultMessage
 fi
 
 git commit -m "$varMessage" -a
