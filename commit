@@ -1,5 +1,9 @@
 #! /bin/bash
 
+# rotina de automatização dos casos mais brandos
+# de versionamento com git
+
+
 now=$(date)
 defaultMessage="mensagem automática jean - $now"
 dir=$(pwd)
@@ -33,19 +37,29 @@ fi
 
 echo "Efetuando pull, diretório atual: $dir "
 git pull origin $branch
+#then
+#	echo "Pull efetuado com sucesso!"
+#else
+#	echo "Algum erro aconteceu durante o pull, provavelmente a conexão ao servidor está inalcançável"
+#	exit 1
+#fi
 
 echo "Efetuando o add . " 
 git add . 
 
 # pega a mensagem do commit do usuário
-read -p "mensagem do commit default <$defaultMessage>" varMessage
+read -p "mensagem do commit default <$defaultMessage>" newMessage
 
-if [[ ! $varMessage ]]
+#se a nova mensagem não foi setada
+#a nova mensagem será a mensagem padrão
+if [[ ! $newMessage ]]
 then
-    varMessage=$defaultMessage
+    newMessage=$defaultMessage
 fi
 
-git commit -m "$varMessage" -a
+#commita as modificação com a mensagem
+#especificada
+git commit -m "$newMessage" -a
 
 echo "Efetuando o push"
 if  $(git push origin $branch 2> /dev/null) 
