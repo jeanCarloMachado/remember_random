@@ -35,14 +35,18 @@ then
 	branch=$newBranch
 fi
 
+
 echo "Efetuando pull, diretório atual: $dir "
-git pull origin $branch
-#then
-#	echo "Pull efetuado com sucesso!"
-#else
-#	echo "Algum erro aconteceu durante o pull, provavelmente a conexão ao servidor está inalcançável"
-#	exit 1
-#fi
+
+git pull origin $branch 
+
+if [ $# ]
+then
+	echo "Pull efetuado com sucesso!"
+else
+	echo "Algum erro aconteceu durante o pull, provavelmente a conexão ao servidor está inalcançável"
+	exit 1
+fi
 
 echo "Efetuando o add . " 
 git add . 
