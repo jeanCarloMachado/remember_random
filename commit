@@ -50,7 +50,5 @@ git commit -m "$varMessage" -a
 
 
 echo "fazendo o push"
-#pega o branch do commit 
-
 git push origin $branch
 
