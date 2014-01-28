@@ -48,7 +48,8 @@ fi
 
 git commit -m "$varMessage" -a
 
-
-echo "fazendo o push"
-git push origin $branch
-
+echo "Efetuando o push"
+if ! $(git push origin $branch 2> /dev/null) 
+then
+	echo "Algum erro aconteceu, provavelmente a conexão ao servidor está inalcançável"
+fi
