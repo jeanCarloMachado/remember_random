@@ -52,6 +52,7 @@ echo "Efetuando o push"
 if  $(git push origin $branch 2> /dev/null) 
 then
 	echo "Push efetuado com sucesso!"
-elif
+else
 	echo "Algum erro aconteceu, provavelmente a conexão ao servidor está inalcançável"
+	exit 1
 fi
