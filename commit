@@ -2,7 +2,7 @@
 
 #variáveis
 varDate=$(date)
-varMessageDef="commit automático jean - data: $varDate"
+varMessageDef="mensagem automática jean - $varDate"
 varDir=$(pwd)
 branch=$(git branch | grep \* | cut -f2 -d ' ')
 branchesList="";
