@@ -4,7 +4,7 @@ remove_empty_line() {
       sed '/^$/d'
 }
 
-config=$(cat config)
+config=$(cat ~/.remember_config)
 
 tmp_file=$(echo "$config" | grep tmp_file | cut -d "=" -f2)
 [ -f $tmp_file ] && {
@@ -35,7 +35,7 @@ do
         do
             echo -e "$line|\c" >> $tmp_file
         done
-    elif [[ $separator == 'emphasis_blocks' ]] 
+    elif [[ $separator == 'emphasis_blocks' ]]
     then
 
         content=$(grep -RPzoh "\n\*{3}[^\*]+\*{3}" $file_path/**/*.md  \

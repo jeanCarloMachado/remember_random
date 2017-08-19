@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-config=$(cat config)
+config=$(cat ~/.remember_config)
 tmp_file=$(echo "$config" | grep tmp_file | cut -d "=" -f2)
 
 get_remember() {
