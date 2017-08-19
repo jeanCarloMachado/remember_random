@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+remove_empty_line() {
+      sed '/^$/d'
+}
+
 config=$(cat config)
 
 tmp_file=$(echo "$config" | grep tmp_file | cut -d "=" -f2)
@@ -23,15 +27,25 @@ do
         do
             echo -e "$line|\c" >> $tmp_file
         done
-    else 
-        content=$(cat $file_path | tr "\n" " " | sed "s/---/\\n/g" | tr -d "-" | tr -d '"' | tr -d "“")
+    elif [[ $separator == 'tree_dashes' ]] 
+    then
+        content=$(cat $file_path | tr "\n" " " | sed "s/---/\\n/g" | tr -d "-" )
 
         for line in $content
         do
             echo -e "$line|\c" >> $tmp_file
         done
+    elif [[ $separator == 'emphasis_blocks' ]] 
+    then
+
+        content=$(grep -RPzoh "\n\*{3}[^\*]+\*{3}" $file_path/**/*.md  \
+        | tr "\*\*\*" "|" |  sed 's/|\{2,\}/|/g' )
+
+        echo $content >> $tmp_file
+
+    else
+        echo "separator method not found"
+        exit 1
     fi
 done
-
-
 
