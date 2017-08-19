@@ -1,0 +1,8 @@
+#!/bin/bash
+
+content=$(cat /home/jean/projects/wiki/src/quotes.md | tr "\n" " " | sed "s/---/\\n/g" | tr -d "-" | tr -d '"' | tr -d "“")
+
+total=$(echo "$content" | wc -l)
+
+echo "$content" | run_function get_line $(random 1 $total)
+

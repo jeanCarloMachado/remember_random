@@ -1,0 +1,5 @@
+#!/bin/bash
+
+FILE=/home/jean/projects/wiki/src/glossary.md
+total=$(cat $FILE | /home/jean/projects/personal-scripts/run_function remove_empty_line | wc -l)
+cat $FILE | /home/jean/projects/personal-scripts/run_function remove_empty_line | /home/jean/projects/personal-scripts/run_function get_line $(/home/jean/projects/personal-scripts/random 1 $total)
