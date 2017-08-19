@@ -1,5 +1,0 @@
-#!/bin/bash
-
-FILE=~/.remember
-total=$(cat $FILE | run_function remove_empty_line | wc -l)
-cat $FILE | run_function remove_empty_line | run_function get_line $(/home/jean/projects/personal-scripts/random 1 $total)

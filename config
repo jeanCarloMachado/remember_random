@@ -1,0 +1,7 @@
+global.tmp_file=/tmp/remember_random_file
+glossary.file_path=/home/jean/projects/wiki/src/glossary.md
+glossary.separator=new_line
+remember.file_path=/home/jean/.remember
+remember.separator=new_line
+
+
