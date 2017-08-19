@@ -1,0 +1,15 @@
+#!/bin/bash
+
+random_value=$(/home/jean/projects/personal-scripts/random 0 100)
+if [ $random_value  -le 25 ]
+then
+     echo "$(/home/jean/projects/personal-scripts/quote_random)"
+elif [ $random_value -le 50 ]
+then
+    echo "$(/home/jean/projects/personal-scripts/glossary_random)"
+elif [ $random_value -le 75 ]
+then
+    echo "$(/home/jean/projects/personal-scripts/highlight_wiki_random)"
+else
+    echo "$(/home/jean/projects/personal-scripts/remember_random)"
+fi

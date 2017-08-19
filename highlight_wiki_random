@@ -1,0 +1,38 @@
+#!/usr/bin/zsh
+
+content=$(grep -RPzoh "\n\*{3}[^\*]+\*{3}" /home/jean/projects/wiki/src/**/*.md 2>/dev/null | tr "\*\*\*" "\n" )
+
+[ -f /tmp/wiki_highlights  ] && {
+    rm -rf /tmp/wiki_highlights
+}
+echo "$content" | /home/jean/projects/personal-scripts/run_function remove_empty_line | sed "s/\x00/|/" | sed 's/|[\n\t\x00]|/|/'>  /tmp/wiki_highlights
+
+
+IFS="|"
+total_highlights=0
+for i in $(cat /tmp/wiki_highlights)
+do
+    if [ -z $i ] || [[ $(wc -c <<< "$i")  -le 3 ]]
+    then
+        continue
+    fi
+
+    total_highlights=$(( $total_highlights + 1 ))
+done
+show_index=$(/home/jean/projects/personal-scripts/random 0 $total_highlights)
+
+counter=0
+for i in $(cat /tmp/wiki_highlights)
+do
+    if [[ -z $i ]] || [[ $(wc -c <<<  "$i")  -le 3 ]]
+    then
+        continue
+    fi
+
+    if [ $counter -eq $show_index ]
+    then
+        echo "$i"
+    fi
+    counter=$(( $counter + 1 ))
+done
+
