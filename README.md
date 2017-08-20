@@ -19,3 +19,20 @@ wiki.file_path=/home/jean/projects/wiki/src
 wiki.separator=emphasis_blocks
 ```
 
+## Binaries
+
+crawler.sh - is responsible to build a table with all notifications
+get_remember.sh - returns a message to be remembered
+gui.py - optional gui for showing the message and change it's probability of showing up again
+
+
+These scripts are made to be used with a cron to adjust the
+frequencies of the notifications and crawling
+Example:
+
+
+```cron
+CONFIG_FILE=/home/jean/.remember_config
+*/30 * * * * /home/jean/projects/remember_random/crawler.sh
+*/5 * * * *  deactivable_run  "$(/home/jean/projects/remember_random/get_remember.sh | /home/jean/projects/remember_random/gui.py )"
+```
