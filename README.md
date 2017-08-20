@@ -19,6 +19,3 @@ wiki.file_path=/home/jean/projects/wiki/src
 wiki.separator=emphasis_blocks
 ```
 
-
-
-
