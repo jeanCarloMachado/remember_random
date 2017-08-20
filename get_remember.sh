@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 
-config=$(cat ~/.remember_config)
+[ -z ${CONFIG_FILE+x} ] && {
+    CONFIG_FILE=~/.remember_config
+}
+
+BASEDIR=$(dirname "$0")
+
+
+config=$(cat $CONFIG_FILE)
 tmp_file=$(echo "$config" | grep tmp_file | cut -d "=" -f2)
 
 get_remember() {
@@ -11,11 +18,11 @@ get_remember() {
         total_remembers=$(( $total_remembers + 1 ))
     done
 
-    show_index=$(./random 0 $total_remembers)
+    show_index=$($BASEDIR/random 0 $total_remembers)
     counter=0
     for i in $(cat $tmp_file)
     do
-        if [ $counter -eq $show_index ]
+        if [[ $counter -eq $show_index ]]
         then
             echo "$i"
         fi

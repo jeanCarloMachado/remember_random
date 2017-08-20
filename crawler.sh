@@ -4,13 +4,18 @@ remove_empty_line() {
       sed '/^$/d'
 }
 
-config=$(cat ~/.remember_config)
+[ -z ${CONFIG_FILE+x} ] && {
+    CONFIG_FILE=~/.remember_config
+}
+
+config=$(cat $CONFIG_FILE)
 
 tmp_file=$(echo "$config" | grep tmp_file | cut -d "=" -f2)
 [ -f $tmp_file ] && {
     rm -rf $tmp_file
 }
 touch $tmp_file
+chmod a+rw $tmp_file
 
 namespaces=$(echo "$config" | cut -d '.' -f1 | uniq | grep -v global)
 IFS='
