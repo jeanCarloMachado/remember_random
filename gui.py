@@ -16,6 +16,9 @@ def show_less(notification,bar,baz):
     m = hashlib.md5()
     m.update(str(notification.get_property('summary')).encode('utf-8'))
     print(m.hexdigest())
+    file = open('/home/jean/.config/remember_random/'+m.hexdigest(), 'w')
+    file.write("low_recurrence")
+    file.close()
 
 def copy(notification,bar,baz):
     p = Popen(['mycopy'], stdout=PIPE, stdin=PIPE, stderr=PIPE)

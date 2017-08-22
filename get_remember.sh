@@ -33,8 +33,18 @@ get_remember() {
 while true
 do
     result=$(get_remember)
-    [[ ${#result} -ge 3  ]] && {
-        echo "$result"
-        exit
+    [[ ${#result} -le 3  ]] && {
+        continue
     }
+
+    result_hash=$(echo "$result" | md5sum | cut -d ' ' -f1)
+    [[ -f "/home/jean/.config/remember_random/$result_hash" ]] && {
+
+        [[ $(random 0 100) -le 75 ]]  && {
+            continue
+        }
+    }
+
+    echo "$result"
+    exit
 done
