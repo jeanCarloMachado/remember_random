@@ -18,12 +18,12 @@ def show_less(notification,bar,baz):
     print(m.hexdigest())
 
 def copy(notification,bar,baz):
-    print('copy')
     p = Popen(['mycopy'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
     p.communicate(input=str(notification.get_property('summary')).encode('utf-8'))[0]
 
 def listen(notification,bar,baz):
-    print('listen')
+    p = Popen(['run_function', 'play_cached_voice'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
+    p.communicate(input=str(notification.get_property('summary')).encode('utf-8'))[0]
 
 notification = Notify.Notification.new(sys.stdin.read())
 notification.add_action(
