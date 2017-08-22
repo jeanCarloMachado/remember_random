@@ -28,6 +28,10 @@ def listen(notification,bar,baz):
     p = Popen(['run_function', 'play_cached_voice'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
     p.communicate(input=str(notification.get_property('summary')).encode('utf-8'))[0]
 
+def google(notification,bar,baz):
+    p = Popen(['google-it'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
+    p.communicate(input=str(notification.get_property('summary')).encode('utf-8'))[0]
+
 notification = Notify.Notification.new(sys.stdin.read())
 notification.add_action(
     "less",
@@ -47,6 +51,13 @@ notification.add_action(
     "listen",
     "Listen",
     listen,
+    None # Arguments
+)
+
+notification.add_action(
+    "google",
+    "Google",
+    google,
     None # Arguments
 )
 # Actually show on screen
