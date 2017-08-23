@@ -9,7 +9,7 @@ gi.require_version('Notify', '0.7')
 from gi.repository import GLib,Notify
 Notify.init("Remember")
 
-TIME_TO_LIVE_MS = 1000 * 60 * 2
+NOTIFICATION_TTL_IN_MS = 1000 * 60 * 2
 
 
 def show_less(notification,bar,baz):
@@ -34,9 +34,9 @@ def google(notification,bar,baz):
 
 
 result = subprocess.run(['/home/jean/projects/remember_random/get_remember.sh'], stdout=subprocess.PIPE)
-message = result.stdout
+message = str(result.stdout.decode('UTF-8'))
 
-notification = Notify.Notification.new(str(message.decode('UTF-8')))
+notification = Notify.Notification.new(message)
 notification.add_action(
     "less",
     "Show Less",
@@ -65,12 +65,15 @@ notification.add_action(
     None
 )
 
-notification.set_timeout(TIME_TO_LIVE_MS)
+notification.set_timeout(NOTIFICATION_TTL_IN_MS)
 notification.show()
 
-def quit():
-    sys.exit(0)
-    Notify.uninit()
+def new_notification():
+    result = subprocess.run(['/home/jean/projects/remember_random/get_remember.sh'], stdout=subprocess.PIPE)
+    message = str(result.stdout.decode('UTF-8'))
+    notification.update(message)
+    notification.show()
+    return True
 
-GLib.timeout_add(TIME_TO_LIVE_MS, quit)
+GLib.timeout_add(NOTIFICATION_TTL_IN_MS * 2, new_notification)
 GLib.MainLoop().run()
