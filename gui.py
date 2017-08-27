@@ -6,7 +6,8 @@ import hashlib
 import subprocess
 from subprocess import Popen, PIPE, STDOUT
 gi.require_version('Notify', '0.7')
-from gi.repository import GLib,Notify
+gi.require_version('GdkPixbuf', '2.0')
+from gi.repository import GLib,Notify,GdkPixbuf
 Notify.init("Remember")
 
 NOTIFICATION_TTL_IN_MS = 1000 * 60 * 2
@@ -35,8 +36,18 @@ def google(notification,bar,baz):
 
 result = subprocess.run(['/home/jean/projects/remember_random/get_remember.sh'], stdout=subprocess.PIPE)
 message = str(result.stdout.decode('UTF-8'))
-
 notification = Notify.Notification.new(message)
+
+result = subprocess.run(['/home/jean/projects/personal-scripts/run_function', 'most_relevant_image', message], stdout=subprocess.PIPE)
+image_path = str(result.stdout.decode('UTF-8'))
+image = GdkPixbuf.Pixbuf.new_from_file_at_scale(
+        image_path,
+        width=200,
+        height=200,
+        preserve_aspect_ratio=True
+        )
+notification.set_image_from_pixbuf(image)
+
 notification.add_action(
     "less",
     "Show Less",
@@ -71,9 +82,21 @@ notification.show()
 def new_notification():
     result = subprocess.run(['/home/jean/projects/remember_random/get_remember.sh'], stdout=subprocess.PIPE)
     message = str(result.stdout.decode('UTF-8'))
+
+    result = subprocess.run(['/home/jean/projects/personal-scripts/run_function', 'most_relevant_image', message], stdout=subprocess.PIPE)
+    image_path = str(result.stdout.decode('UTF-8'))
+    image = GdkPixbuf.Pixbuf.new_from_file_at_scale(
+            image_path,
+            width=50,
+            height=50,
+            preserve_aspect_ratio=True
+            )
+
+    notification.set_image_from_pixbuf(image)
+
     notification.update(message)
     notification.show()
     return True
 
-GLib.timeout_add(NOTIFICATION_TTL_IN_MS * 2, new_notification)
+GLib.timeout_add(NOTIFICATION_TTL_IN_MS * 5, new_notification)
 GLib.MainLoop().run()
