@@ -11,31 +11,26 @@ gi.require_version('GdkPixbuf', '2.0')
 from gi.repository import GLib,Notify,GdkPixbuf
 Notify.init("Remember")
 
-NOTIFICATION_TTL_IN_MS = 1000 * 60 * 2
-
-def configure_notification(notification):
-    result = subprocess.run(['/home/jean/projects/remember_random/get_remember.sh'], stdout=subprocess.PIPE)
-    message = str(result.stdout.decode('UTF-8'))
-    notification.update(message)
-
-    result = subprocess.run(['/home/jean/projects/personal-scripts/run_function', 'most_relevant_image', message], stdout=subprocess.PIPE)
-    image_path = str(result.stdout.decode('UTF-8'))
-
-    my_file = Path(image_path)
-    if my_file.is_file():
-        image = GdkPixbuf.Pixbuf.new_from_file_at_scale(
-                image_path,
-                width=200,
-                height=200,
-                preserve_aspect_ratio=True
-                )
-        notification.set_image_from_pixbuf(image)
-    return notification
+NOTIFICATION_TTL_IN_MS = 1000 * 10 * 2
 
 
+message = sys.stdin.read()
+notification = Notify.Notification.new(message)
+notification.set_timeout(NOTIFICATION_TTL_IN_MS)
 
-notification = Notify.Notification.new('')
-notification = configure_notification(notification)
+image_path = subprocess.run(['/home/jean/projects/personal-scripts/run_function', 'most_relevant_image', message], stdout=subprocess.PIPE).stdout.decode('UTF-8')
+
+my_file = Path(image_path)
+if my_file.is_file():
+    image = GdkPixbuf.Pixbuf.new_from_file_at_scale(
+            image_path,
+            width=200,
+            height=200,
+            preserve_aspect_ratio=True
+            )
+    notification.set_image_from_pixbuf(image)
+
+
 
 def show_less_frequently(notification,bar,baz):
     m = hashlib.md5()
@@ -76,7 +71,7 @@ notification.add_action(
 
 def google_notification(notification,bar,baz):
     p = Popen(['/home/jean/projects/personal-scripts/google_it'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
-    p.communicate(input=str(notification.get_property('summary')).encode('utf-8'))[0]
+    p.communicate(input=str(notification.get_property('summary')))
 
 notification.add_action(
     "google_notification",
@@ -85,13 +80,19 @@ notification.add_action(
     None
 )
 
-notification.set_timeout(NOTIFICATION_TTL_IN_MS)
+def edit_notification(notification,bar,baz):
+    p = Popen(['/home/jean/projects/personal-scripts/run_function', 'terminal_run', 'run_function edit_remeber "'+notification.get_property('summary')+'"'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
+
+notification.add_action(
+    "edit_notification",
+    "Edit",
+    edit_notification,
+    None
+)
+
 notification.show()
+def quit():
+    sys.exit()
 
-def new_notification():
-    notification = configure_notification(notification)
-    notification.show()
-    return True
-
-GLib.timeout_add(NOTIFICATION_TTL_IN_MS * 5, new_notification)
+GLib.timeout_add(NOTIFICATION_TTL_IN_MS, quit)
 GLib.MainLoop().run()
