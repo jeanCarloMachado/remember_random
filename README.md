@@ -1,7 +1,6 @@
 # Remember Random
 
-Remember random is a tool to notify you of text you mark to be
-remembered. Useful for wikis.
+A unix-like tool to notify you of text you mark to be remembered. Useful for wikis.
 
 Config example:
 
@@ -23,18 +22,18 @@ wiki.separator=emphasis_blocks
 
 1. crawler.sh - is responsible to build a table with all notifications
 2. get_remember.sh - returns a message to be remembered
-3. gui.py - optional gui for showing the message and change it's probability of showing up again
+3. notification_gui.py - optional gui for showing the message and change it's probability of showing up again
 
 
 These scripts are made to be used with a cron to adjust the
 frequencies of the notifications and crawling
-Example:
 
+## Example:
 
 ```cron
 CONFIG_FILE=/home/jean/.remember_config
 */30 * * * * /home/jean/projects/remember_random/crawler.sh
-*/5 * * * *  deactivable_run  "$(/home/jean/projects/remember_random/get_remember.sh | /home/jean/projects/remember_random/gui.py )"
+*/5  * * * (cd /home/jean/projects/remember_random ; ./get_remember.sh | ./notification_gui.py )
 ```
 
 ## License

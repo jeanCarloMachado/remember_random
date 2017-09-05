@@ -9,18 +9,24 @@ BASEDIR=$(dirname "$0")
 
 config=$(cat $CONFIG_FILE)
 tmp_file=$(echo "$config" | grep tmp_file | cut -d "=" -f2)
+tmp_file_content=$(cat $tmp_file)
+
+[[ ! -f "$tmp_file" ]]  || [[ -z $tmp_file_content ]] && {
+    echo "tmp_file invalid"
+    exit 1
+}
 
 get_remember() {
     total_remembers=0
     IFS='|'
-    for i in $(cat $tmp_file)
+    for i in $tmp_file_content
     do
         total_remembers=$(( $total_remembers + 1 ))
     done
 
     show_index=$($BASEDIR/random 0 $total_remembers)
     counter=0
-    for i in $(cat $tmp_file)
+    for i in $tmp_file_content
     do
         if [[ $counter -eq $show_index ]]
         then
