@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-
-[ -z ${CONFIG_FILE+x} ] && {
-    CONFIG_FILE=~/.remember_config
+[ -z ${CONFIG_FILE+x} ] && { CONFIG_FILE=~/.remember_config
 }
 
 BASEDIR=$(dirname "$0")

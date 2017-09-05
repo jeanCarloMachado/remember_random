@@ -11,7 +11,7 @@ gi.require_version('GdkPixbuf', '2.0')
 from gi.repository import GLib,Notify,GdkPixbuf
 Notify.init("Remember")
 
-NOTIFICATION_TTL_IN_MS = 1000 * 10 * 2
+NOTIFICATION_TTL_IN_MS = 1000 * 60 * 2
 
 
 message = sys.stdin.read()
@@ -60,7 +60,8 @@ notification.add_action(
 
 def listen_notification(notification,bar,baz):
     p = Popen(['/home/jean/projects/personal-scripts/run_function', 'play_cached_voice'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
-    p.communicate(input=str(notification.get_property('summary')).encode('utf-8'))[0]
+    message = str(notification.get_property('summary')).encode('utf-8')
+    p.communicate(input=message)[0]
 
 notification.add_action(
     "listen",
@@ -71,7 +72,8 @@ notification.add_action(
 
 def google_notification(notification,bar,baz):
     p = Popen(['/home/jean/projects/personal-scripts/google_it'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
-    p.communicate(input=str(notification.get_property('summary')))
+    message = str(notification.get_property('summary')).encode('utf-8')
+    p.communicate(input=message)
 
 notification.add_action(
     "google_notification",
@@ -81,7 +83,7 @@ notification.add_action(
 )
 
 def edit_notification(notification,bar,baz):
-    p = Popen(['/home/jean/projects/personal-scripts/run_function', 'terminal_run', 'run_function edit_remeber "'+notification.get_property('summary')+'"'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
+    p = Popen(['/home/jean/projects/personal-scripts/run_function', 'terminal_run', 'run_function edit_remember "'+notification.get_property('summary')+'"'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
 
 notification.add_action(
     "edit_notification",
