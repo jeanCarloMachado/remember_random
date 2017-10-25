@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 import gi
 import sys
 import time
@@ -13,9 +14,13 @@ Notify.init("Remember")
 
 NOTIFICATION_TTL_IN_MS = 1000 * 60 * 2
 
-
 message = sys.stdin.read()
-notification = Notify.Notification.new(message)
+
+if len(message) < 500:
+    notification = Notify.Notification.new(message)
+else:
+    notification = Notify.Notification.new('', message)
+
 notification.set_timeout(NOTIFICATION_TTL_IN_MS)
 
 image_path = subprocess.run(['/home/jean/projects/personal-scripts/run_function', 'most_relevant_image', message], stdout=subprocess.PIPE).stdout.decode('UTF-8')
@@ -33,8 +38,9 @@ if my_file.is_file():
 
 
 def show_less_frequently(notification,bar,baz):
+    global message
     m = hashlib.md5()
-    m.update(str(notification.get_property('summary')).encode('utf-8'))
+    m.update(message)
     print(m.hexdigest())
     file = open('/home/jean/.config/remember_random/'+m.hexdigest(), 'w')
     file.write("low_recurrence")
@@ -48,8 +54,9 @@ notification.add_action(
 )
 
 def send_notification_to_clippboard(notification,bar,baz):
+    global message
     p = Popen(['mycopy'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
-    p.communicate(input=str(notification.get_property('summary')).encode('utf-8'))[0]
+    p.communicate(input=message.encode('utf-8'))
 
 notification.add_action(
     "copy",
@@ -59,9 +66,9 @@ notification.add_action(
 )
 
 def listen_notification(notification,bar,baz):
+    global message
     p = Popen(['/home/jean/projects/personal-scripts/run_function', 'play_cached_voice'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
-    message = str(notification.get_property('summary')).encode('utf-8')
-    p.communicate(input=message)[0]
+    p.communicate(input=message.encode('utf-8'))
 
 notification.add_action(
     "listen",
@@ -71,9 +78,9 @@ notification.add_action(
 )
 
 def google_notification(notification,bar,baz):
+    global message
     p = Popen(['/home/jean/projects/personal-scripts/google_it'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
-    message = str(notification.get_property('summary')).encode('utf-8')
-    p.communicate(input=message)
+    p.communicate(input=message.encode('utf-8'))
 
 notification.add_action(
     "google_notification",
@@ -83,11 +90,12 @@ notification.add_action(
 )
 
 def edit_notification(notification,bar,baz):
-    p = Popen(['/home/jean/projects/personal-scripts/run_function', 'terminal_run', 'run_function edit_remember "'+notification.get_property('summary')+'"'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
+    global message
+    p = Popen(['/home/jean/projects/personal-scripts/run_function', 'terminal_run', 'run_function edit_remember "'+message+'"'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
 
 notification.add_action(
-    "edit_notification",
-    "Edit",
+    'clicked',
+    'Edit',
     edit_notification,
     None
 )
