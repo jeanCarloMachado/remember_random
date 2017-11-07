@@ -32,7 +32,7 @@ do
         do
             echo -e "$line|\c" >> $tmp_file
         done
-    elif [[ $separator == 'tree_dashes' ]] 
+    elif [[ $separator == 'tree_dashes' ]]
     then
         content=$(cat $file_path | tr "\n" " " | sed "s/---/\\n/g" | tr -d "-" )
 
@@ -42,15 +42,23 @@ do
         done
     elif [[ $separator == 'emphasis_blocks' ]]
     then
-
         content=$(grep -RPzoh "\n\*{3}[^\*]+\*{3}" $file_path/**/*.md  \
-        | tr "\*\*\*" "|" |  sed 's/|\{2,\}/|/g' )
+        | tr "\*\*\*" "|" )
 
         echo $content >> $tmp_file
+    elif [[ $separator == 'marked_folds' ]]
+    then
+        content=$(grep -RPzoh "\{{3}[^\{\}]+\}{3}" $file_path/**/*.md  \
+            | tr "\{\{\{" "|" | tr "\}\}\}" "|" )
 
+        echo $content >> $tmp_file
     else
-        echo "separator method not found"
+        echo "separator method ($method) not found"
         exit 1
     fi
 done
 
+sed -i "s/| |/|/g" $tmp_file
+sed -i "s/||/|/g" $tmp_file
+sed -i "s/||/|/g" $tmp_file
+sed -i "s/||/|/g" $tmp_file
