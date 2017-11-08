@@ -79,7 +79,7 @@ notification.add_action(
 
 def google_notification(notification,bar,baz):
     global message
-    p = Popen(['/home/jean/projects/personal-scripts/google_it'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
+    p = Popen(['/home/jean/projects/personal-scripts/run_function', 'googleIt'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
     p.communicate(input=message.encode('utf-8'))
 
 notification.add_action(
