@@ -32,7 +32,7 @@ do
         do
             echo -e "$line|\c" >> $tmp_file
         done
-    elif [[ $separator == 'tree_dashes' ]]
+    elif [[ $separator == 'three_dashes' ]]
     then
         content=$(cat $file_path | tr "\n" " " | sed "s/---/\\n/g" | tr -d "-" )
 
