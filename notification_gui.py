@@ -2,6 +2,7 @@
 
 import gi
 import sys
+import signal
 import time
 import hashlib
 import subprocess
@@ -10,6 +11,9 @@ from subprocess import Popen, PIPE, STDOUT
 gi.require_version('Notify', '0.7')
 gi.require_version('GdkPixbuf', '2.0')
 from gi.repository import GLib,Notify,GdkPixbuf
+
+
+
 Notify.init("Remember")
 
 NOTIFICATION_TTL_IN_MS = 1000 * 60 * 2
@@ -23,7 +27,7 @@ else:
 
 notification.set_timeout(NOTIFICATION_TTL_IN_MS)
 
-image_path = subprocess.run(['/home/jean/projects/personal-scripts/run_function', 'most_relevant_image', message], stdout=subprocess.PIPE).stdout.decode('UTF-8')
+image_path = subprocess.run(['./most_relevant_image.sh', message], stdout=subprocess.PIPE).stdout.decode('UTF-8')
 
 my_file = Path(image_path)
 if my_file.is_file():
@@ -67,7 +71,7 @@ notification.add_action(
 
 def listen_notification(notification,bar,baz):
     global message
-    p = Popen(['/home/jean/projects/personal-scripts/run_function', 'play_cached_voice'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
+    p = Popen(['./play_voice.sh'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
     p.communicate(input=message.encode('utf-8'))
 
 notification.add_action(
@@ -79,7 +83,7 @@ notification.add_action(
 
 def google_notification(notification,bar,baz):
     global message
-    p = Popen(['/home/jean/projects/personal-scripts/run_function', 'googleIt'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
+    p = Popen(['./googleit.sh'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
     p.communicate(input=message.encode('utf-8'))
 
 notification.add_action(
@@ -91,7 +95,7 @@ notification.add_action(
 
 def edit_notification(notification,bar,baz):
     global message
-    p = Popen(['/home/jean/projects/personal-scripts/run_function', 'terminal_run', 'run_function edit_remember "'+message+'"'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
+    p = Popen(['./editRemember.sh', '"'+message+'"'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
 
 notification.add_action(
     'clicked',
@@ -105,4 +109,9 @@ def quit():
     sys.exit()
 
 GLib.timeout_add(NOTIFICATION_TTL_IN_MS, quit)
-GLib.MainLoop().run()
+
+try:
+    GLib.MainLoop().run()
+except:
+    quit()
+
