@@ -95,7 +95,8 @@ notification.add_action(
 
 def edit_notification(notification,bar,baz):
     global message
-    p = Popen(['./editRemember.sh', '"'+message+'"'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
+    p = Popen(['./editRemember.sh'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
+    p.communicate(input=message.encode('utf-8'))
 
 notification.add_action(
     'clicked',
