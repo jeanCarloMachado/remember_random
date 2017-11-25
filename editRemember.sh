@@ -1,22 +1,57 @@
 #!/usr/bin/env bash
 
-echo "edit remmember"
 ere_quote() {
     sed 's/[]\|$(){}?+*^]/\\&/g' <<< "$*"
 }
 
+openResult() {
+    result=$(echo "$1" | head -n 1)
+    file=$(head -n1 <<< $result | cut -d ':' -f1)
+    line=$(head -n1 <<< $result | cut -d ':' -f2)
+    gvim +$line $file
+}
+
+
+SEARCH_DIRECTORY=$WIKI_PATH
 content=${1:-$(cat /dev/stdin)}
 content=$(ere_quote "$content")
-remember=$(echo "$content" | cut -c1-20 )
-result=$(grep -n "$remember"  -R $WIKI_PATH)
 
-[ -z "$result" ] && {
-    echo "No match found"
-    exit 1
+#search first 40 chars
+remember=$(echo "$content" | cut -c1-40 )
+result=$(grep -n "$remember"  -R $SEARCH_DIRECTORY)
+
+[ ! -z "$result" ] && {
+    openResult "$result"
+    exit
 }
-echo "Found match"
-result=$(echo "$result" | head -n 1)
 
-file=$(head -n1 <<< $result | cut -d ':' -f1)
-line=$(head -n1 <<< $result | cut -d ':' -f2)
-gvim +$line $file
+#search first 20 chars
+remember=$(echo "$content" | cut -c1-20 )
+result=$(grep -n "$remember"  -R $SEARCH_DIRECTORY)
+
+[ ! -z "$result" ] && {
+    openResult "$result"
+    exit
+}
+
+#search first 10 chars
+remember=$(echo "$content" | cut -c1-10 )
+result=$(grep -n "$remember"  -R $SEARCH_DIRECTORY)
+
+[ ! -z "$result" ] && {
+    openResult "$result"
+    exit
+}
+
+
+#search last 10 chars
+remember=$(echo "$content" | rev | cut -c1-10 | rev )
+result=$(grep -n "$remember"  -R $SEARCH_DIRECTORY)
+
+[ ! -z "$result" ] && {
+    openResult "$result"
+    exit
+}
+
+
+exit 1
