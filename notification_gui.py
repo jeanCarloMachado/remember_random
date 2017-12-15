@@ -27,7 +27,7 @@ else:
 
 notification.set_timeout(NOTIFICATION_TTL_IN_MS)
 
-image_path = subprocess.run(['./most_relevant_image.sh', message], stdout=subprocess.PIPE).stdout.decode('UTF-8')
+image_path = subprocess.run(['most_relevant_image.sh', message], stdout=subprocess.PIPE).stdout.decode('UTF-8')
 
 my_file = Path(image_path)
 if my_file.is_file():
@@ -71,7 +71,7 @@ notification.add_action(
 
 def listen_notification(notification,bar,baz):
     global message
-    p = Popen(['./play_voice.sh'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
+    p = Popen(['play_voice.sh'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
     p.communicate(input=message.encode('utf-8'))
 
 notification.add_action(
@@ -83,7 +83,7 @@ notification.add_action(
 
 def google_notification(notification,bar,baz):
     global message
-    p = Popen(['./googleit.sh'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
+    p = Popen(['googleit.sh'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
     p.communicate(input=message.encode('utf-8'))
 
 notification.add_action(
@@ -95,7 +95,7 @@ notification.add_action(
 
 def edit_notification(notification,bar,baz):
     global message
-    p = Popen(['./editRemember.sh'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
+    p = Popen(['editRemember.sh'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
     p.communicate(input=message.encode('utf-8'))
 
 notification.add_action(
