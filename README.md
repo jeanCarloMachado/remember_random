@@ -20,3 +20,7 @@ quotes.separator=tree_dashes
 wiki.file_path=/home/jean/projects/wiki/src
 wiki.separator=emphasis_blocks
 ```
+
+Output:
+
+![image](https://i.imgur.com/3GfB6pB.png)
