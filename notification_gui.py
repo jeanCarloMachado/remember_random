@@ -11,8 +11,7 @@ from subprocess import Popen, PIPE, STDOUT
 gi.require_version('Notify', '0.7')
 gi.require_version('GdkPixbuf', '2.0')
 from gi.repository import GLib,Notify,GdkPixbuf
-
-
+import os
 
 Notify.init("Remember")
 
@@ -27,7 +26,7 @@ else:
 
 notification.set_timeout(NOTIFICATION_TTL_IN_MS)
 
-image_path = subprocess.run(['most_relevant_image.sh', message], stdout=subprocess.PIPE).stdout.decode('UTF-8')
+image_path = subprocess.run(['mostRelevantImage.sh', message], stdout=subprocess.PIPE).stdout.decode('UTF-8')
 
 my_file = Path(image_path)
 if my_file.is_file():
@@ -39,14 +38,12 @@ if my_file.is_file():
             )
     notification.set_image_from_pixbuf(image)
 
-
-
 def show_less_frequently(notification,bar,baz):
     global message
     m = hashlib.md5()
     m.update(message)
     print(m.hexdigest())
-    file = open('/home/jean/.config/remember_random/'+m.hexdigest(), 'w')
+    file = open(os.path.dirname(os.path.realpath(__file__))+m.hexdigest(), 'w')
     file.write("low_recurrence")
     file.close()
 
@@ -57,21 +54,9 @@ notification.add_action(
     None
 )
 
-def send_notification_to_clippboard(notification,bar,baz):
-    global message
-    p = Popen(['mycopy'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
-    p.communicate(input=message.encode('utf-8'))
-
-notification.add_action(
-    "copy",
-    "Copy",
-    send_notification_to_clippboard,
-    None
-)
-
 def listen_notification(notification,bar,baz):
     global message
-    p = Popen(['play_voice.sh'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
+    p = Popen(['playVoice.sh'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
     p.communicate(input=message.encode('utf-8'))
 
 notification.add_action(
