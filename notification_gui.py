@@ -19,7 +19,7 @@ NOTIFICATION_TTL_IN_MS = 1000 * 60 * 2
 
 message = sys.stdin.read()
 
-if len(message) < 500:
+if len(message) < 100:
     notification = Notify.Notification.new(message)
 else:
     notification = Notify.Notification.new('', message)

@@ -25,6 +25,17 @@ result=$(grep -n "$remember"  -R $SEARCH_DIRECTORY)
     exit
 }
 
+
+#search last 40 chars
+remember=$(echo "$content" | rev | cut -c1-40 | rev )
+result=$(grep -n "$remember"  -R $SEARCH_DIRECTORY)
+
+[ ! -z "$result" ] && {
+    openResult "$result"
+    exit
+}
+
+
 #search first 20 chars
 remember=$(echo "$content" | cut -c1-20 )
 result=$(grep -n "$remember"  -R $SEARCH_DIRECTORY)
@@ -34,8 +45,8 @@ result=$(grep -n "$remember"  -R $SEARCH_DIRECTORY)
     exit
 }
 
-#search first 10 chars
-remember=$(echo "$content" | cut -c1-10 )
+#search last 20 chars
+remember=$(echo "$content" | rev | cut -c1-20 | rev )
 result=$(grep -n "$remember"  -R $SEARCH_DIRECTORY)
 
 [ ! -z "$result" ] && {
@@ -44,8 +55,18 @@ result=$(grep -n "$remember"  -R $SEARCH_DIRECTORY)
 }
 
 
-#search last 10 chars
-remember=$(echo "$content" | rev | cut -c1-10 | rev )
+#search first 15 chars
+remember=$(echo "$content" | cut -c1-15 )
+result=$(grep -n "$remember"  -R $SEARCH_DIRECTORY)
+
+[ ! -z "$result" ] && {
+    openResult "$result"
+    exit
+}
+
+
+#search last 15 chars
+remember=$(echo "$content" | rev | cut -c1-15 | rev )
 result=$(grep -n "$remember"  -R $SEARCH_DIRECTORY)
 
 [ ! -z "$result" ] && {
