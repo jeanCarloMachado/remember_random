@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 var DomParser = require('dom-parser');
 var parser = new DomParser();
 
